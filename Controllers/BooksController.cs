@@ -13,14 +13,12 @@ namespace ProgLibrary.UI.Controllers
     [Route("[controller]")]
     public class BooksController : Controller
     {
-        //private readonly IHttpClientFactory _httpClientFactory;
-        //private readonly IJwtHandler _jwtHandler;
+
         private readonly IBrokerService _brokerService;
         public BooksController(IBrokerService brokerService)
         {
             _brokerService = brokerService;
-            //_httpClientFactory = httpClientFactory;
-            //_jwtHandler = jwtHandler;
+
         }
         // GET: BooksController
         public ActionResult Index()

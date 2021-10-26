@@ -58,9 +58,10 @@ namespace ProgLibrary.UI
             .AddDefaultTokenProviders();
 
             services.Configure<JwtSettings>(Configuration.GetSection("JWT")); // Bindowanie z sekcji konfiguracji JwtConfig - appsetings.json"   
+           
             services.AddSingleton<IJwtHandler, JwtHandler>(); //JwtBearer Tokens Handler
-            services.AddScoped<IBrokerService, BrokerService>();
-            services.AddDistributedMemoryCache();
+            services.AddSingleton<IBrokerService, BrokerService>();
+            //services.AddDistributedMemoryCache();
 
             services.AddHttpClient("api", c =>
             {
