@@ -490,3 +490,12 @@ C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\obj\Debug\net5.0\R
 C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\obj\Debug\net5.0\Razor\Views\Books\Index.cshtml.g.cs
 C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\obj\Debug\net5.0\Razor\Views\Books\Details.cshtml.g.cs
 C:\Users\dorynekm\source\repos\maciejdorynek95\ProgLibrary.UI\obj\Debug\net5.0\Razor\Views\Account\Index.cshtml.g.cs
+C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\bin\Debug\net5.0\Serilog.dll
+C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\bin\Debug\net5.0\Serilog.AspNetCore.dll
+C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\bin\Debug\net5.0\Serilog.Extensions.Hosting.dll
+C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\bin\Debug\net5.0\Serilog.Extensions.Logging.dll
+C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\bin\Debug\net5.0\Serilog.Formatting.Compact.dll
+C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\bin\Debug\net5.0\Serilog.Settings.Configuration.dll
+C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\bin\Debug\net5.0\Serilog.Sinks.Console.dll
+C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\bin\Debug\net5.0\Serilog.Sinks.Debug.dll
+C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\bin\Debug\net5.0\Serilog.Sinks.File.dll

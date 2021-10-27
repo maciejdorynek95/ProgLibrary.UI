@@ -13,6 +13,7 @@ using System.Threading.Tasks;
 namespace ProgLibrary.UI.Controllers
 {
     [AllowAnonymous]
+    [Route("[controller]")]
     public class AccountController : Controller
     {
         private readonly IBrokerService _brokerService;
@@ -31,11 +32,11 @@ namespace ProgLibrary.UI.Controllers
         }
 
         // GET: LoginController/Details/Guid
-        [HttpGet]
+        [HttpGet("Details/{userId}")]
         public async Task<IActionResult> Details(Guid userId)
         {
             var client = await _brokerService.Create(HttpContext);
-            var response = await _brokerService.SendJsonAsync(client, "Account/Get", userId);
+            var response = await _brokerService.SendJsonAsync(client, "Account/GetById", userId);
             var user = await response.Content.ReadFromJsonAsync<AccountDto>();
             return View(_mapper.Map<AccountViewModel>(user));
         }

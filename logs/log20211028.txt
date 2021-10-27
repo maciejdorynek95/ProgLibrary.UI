@@ -1,0 +1,56 @@
+2021-10-28 00:06:13.505 +02:00 [INF] Staring Web App
+2021-10-28 00:06:17.126 +02:00 [INF] User profile is available. Using 'C:\Users\dorynekm\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-10-28 00:06:17.781 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-10-28 00:06:17.782 +02:00 [INF] Hosting environment: Development
+2021-10-28 00:06:17.782 +02:00 [INF] Content root path: C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI
+2021-10-28 00:06:17.868 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44306/ - -
+2021-10-28 00:06:18.155 +02:00 [INF] Executing endpoint 'ProgLibrary.UI.Controllers.HomeController.Index (ProgLibrary.UI)'
+2021-10-28 00:06:18.248 +02:00 [INF] Route matched with {action = "Index", controller = "Home", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller ProgLibrary.UI.Controllers.HomeController (ProgLibrary.UI).
+2021-10-28 00:06:18.278 +02:00 [INF] Executing ViewResult, running view Index.
+2021-10-28 00:06:18.550 +02:00 [INF] Executed ViewResult - view Index executed in 280.5411ms.
+2021-10-28 00:06:18.557 +02:00 [INF] Executed action ProgLibrary.UI.Controllers.HomeController.Index (ProgLibrary.UI) in 308.246ms
+2021-10-28 00:06:18.559 +02:00 [INF] Executed endpoint 'ProgLibrary.UI.Controllers.HomeController.Index (ProgLibrary.UI)'
+2021-10-28 00:06:18.606 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44306/ - - - 200 - text/html;+charset=utf-8 739.5281ms
+2021-10-28 00:06:18.641 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/css/bootstrap.min.css - -
+2021-10-28 00:06:18.641 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44306/lib/jquery/dist/jquery.min.js - -
+2021-10-28 00:06:18.642 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44306/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - -
+2021-10-28 00:06:18.674 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/js/bootstrap.bundle.min.js - -
+2021-10-28 00:06:18.698 +02:00 [INF] Sending file. Request path: '/js/site.js'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\js\site.js'
+2021-10-28 00:06:18.699 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44306/css/site.css - -
+2021-10-28 00:06:18.701 +02:00 [INF] Sending file. Request path: '/css/site.css'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\css\site.css'
+2021-10-28 00:06:18.702 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44306/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - - - 200 230 application/javascript 59.9355ms
+2021-10-28 00:06:18.705 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44306/css/site.css - - - 200 1417 text/css 5.7314ms
+2021-10-28 00:06:18.718 +02:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js'
+2021-10-28 00:06:18.718 +02:00 [INF] Sending file. Request path: '/lib/jquery/dist/jquery.min.js'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\lib\jquery\dist\jquery.min.js'
+2021-10-28 00:06:18.718 +02:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css'
+2021-10-28 00:06:18.729 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/css/bootstrap.min.css - - - 200 155764 text/css 88.4973ms
+2021-10-28 00:06:18.729 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44306/lib/jquery/dist/jquery.min.js - - - 200 89476 application/javascript 87.9990ms
+2021-10-28 00:06:18.729 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/js/bootstrap.bundle.min.js - - - 200 78641 application/javascript 55.3915ms
+2021-10-28 00:17:44.342 +02:00 [INF] Staring Web App
+2021-10-28 00:17:47.747 +02:00 [INF] User profile is available. Using 'C:\Users\dorynekm\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-10-28 00:17:48.267 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-10-28 00:17:48.267 +02:00 [INF] Hosting environment: Development
+2021-10-28 00:17:48.267 +02:00 [INF] Content root path: C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI
+2021-10-28 00:17:48.339 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44306/ - -
+2021-10-28 00:17:48.504 +02:00 [INF] Executing endpoint 'ProgLibrary.UI.Controllers.HomeController.Index (ProgLibrary.UI)'
+2021-10-28 00:17:48.559 +02:00 [INF] Route matched with {action = "Index", controller = "Home", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller ProgLibrary.UI.Controllers.HomeController (ProgLibrary.UI).
+2021-10-28 00:17:48.578 +02:00 [INF] Executing ViewResult, running view Index.
+2021-10-28 00:17:48.930 +02:00 [INF] Executed ViewResult - view Index executed in 354.8953ms.
+2021-10-28 00:17:48.936 +02:00 [INF] Executed action ProgLibrary.UI.Controllers.HomeController.Index (ProgLibrary.UI) in 375.4353ms
+2021-10-28 00:17:48.937 +02:00 [INF] Executed endpoint 'ProgLibrary.UI.Controllers.HomeController.Index (ProgLibrary.UI)'
+2021-10-28 00:17:48.967 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44306/ - - - 200 - text/html;+charset=utf-8 630.1630ms
+2021-10-28 00:17:49.039 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44306/css/site.css - -
+2021-10-28 00:17:49.045 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/css/bootstrap.min.css - -
+2021-10-28 00:17:49.073 +02:00 [INF] Sending file. Request path: '/css/site.css'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\css\site.css'
+2021-10-28 00:17:49.074 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44306/css/site.css - - - 200 1417 text/css 34.1982ms
+2021-10-28 00:17:49.084 +02:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css'
+2021-10-28 00:17:49.089 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44306/lib/jquery/dist/jquery.min.js - -
+2021-10-28 00:17:49.090 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/css/bootstrap.min.css - - - 200 155764 text/css 51.0280ms
+2021-10-28 00:17:49.101 +02:00 [INF] Sending file. Request path: '/lib/jquery/dist/jquery.min.js'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\lib\jquery\dist\jquery.min.js'
+2021-10-28 00:17:49.104 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44306/lib/jquery/dist/jquery.min.js - - - 200 89476 application/javascript 14.7023ms
+2021-10-28 00:17:49.113 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/js/bootstrap.bundle.min.js - -
+2021-10-28 00:17:49.119 +02:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js'
+2021-10-28 00:17:49.122 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/js/bootstrap.bundle.min.js - - - 200 78641 application/javascript 9.2064ms
+2021-10-28 00:17:49.140 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44306/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - -
+2021-10-28 00:17:49.142 +02:00 [INF] Sending file. Request path: '/js/site.js'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\js\site.js'
+2021-10-28 00:17:49.144 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44306/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - - - 200 230 application/javascript 3.6167ms

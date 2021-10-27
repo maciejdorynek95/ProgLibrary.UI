@@ -19,7 +19,6 @@ namespace ProgLibrary.UI.Controllers
         private readonly IBrokerService _brokerService;
         private readonly IBookService _bookService;
         private readonly IMapper _mapper;
-
         public BooksController(IBrokerService brokerService, IBookService bookService, IMapper mapper)
         {
             _brokerService = brokerService;
@@ -36,7 +35,6 @@ namespace ProgLibrary.UI.Controllers
 
         }
 
-
         public async Task<IActionResult> Details(Guid id)
         {
 
@@ -44,14 +42,7 @@ namespace ProgLibrary.UI.Controllers
             var response = await _brokerService.SendJsonAsync(client, "Books/Get/bookId", id);
             var book = await response.Content.ReadFromJsonAsync<BookDetailsDto>();
             return View(_mapper.Map<BookDetailsViewModel>(book));
-
-
-
         }
-
-     
-
-
 
         [HttpGet]
         public IActionResult Create()
@@ -70,41 +61,49 @@ namespace ProgLibrary.UI.Controllers
             {
                 return View("Error", command);
             }
-            ViewBag.Book = command;
+            ViewBag.CreatedBook = command;
             return View();
 
         }
 
 
 
-
-
-
-        public IActionResult Edit(Guid id)
+        [HttpGet]
+        [ValidateAntiForgeryToken]
+        public  IActionResult Update()
         {
-            return View(_bookService.GetAsync(id));
+            return View();
         }
-
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Edit(Guid id, IFormCollection collection)
+        public async Task<IActionResult> Update(Guid id)
         {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
+            var client = await _brokerService.Create(HttpContext);
+            var response = await _brokerService.SendJsonAsync(client, "Books/Edit/bookId", id);
+            var book = await response.Content.ReadFromJsonAsync<BookDetailsDto>();
+            return View(_mapper.Map<BookDetailsViewModel>(book));
 
+        }
 
         public async Task<IActionResult> Delete(Guid id)
         {
-            await _bookService.DeleteAsync(id);
-            return View();
+            var client = await _brokerService.Create(HttpContext);
+            var response = await _brokerService.SendJsonAsync(client, "Books/Delete/bookId", id);
+            var book = await response.Content.ReadFromJsonAsync<BookDetailsDto>();
+
+            try
+            {
+                RedirectToAction(nameof(Index));
+            }
+            catch (Exception)
+            {
+
+                return View();
+            }
+
+            return Ok();
+
         }
 
 

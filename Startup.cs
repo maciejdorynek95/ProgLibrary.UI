@@ -4,7 +4,6 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -15,7 +14,6 @@ using ProgLibrary.Core.DAL;
 using ProgLibrary.Core.Domain;
 using ProgLibrary.Core.Repositories;
 using ProgLibrary.Infrastructure.Mappers;
-using ProgLibrary.Infrastructure.Middlewares;
 using ProgLibrary.Infrastructure.Repositories;
 using ProgLibrary.Infrastructure.Services;
 using ProgLibrary.Infrastructure.Services.JwtToken;
@@ -38,7 +36,7 @@ namespace ProgLibrary.UI
         public void ConfigureServices(IServiceCollection services)
         {
             //services.AddMvc();
-       
+
 
             services.AddSession(options =>
             {
@@ -46,11 +44,10 @@ namespace ProgLibrary.UI
                 options.Cookie.SameSite = SameSiteMode.Lax;
                 options.IdleTimeout = TimeSpan.FromSeconds(60);
                 options.IOTimeout = TimeSpan.FromSeconds(60);
-                //options.Cookie.IsEssential = true;
 
             });
 
-           
+            
 
             services.AddDbContext<AuthenticationDbContext>();
             services.AddIdentity<User, Role>()
@@ -64,16 +61,14 @@ namespace ProgLibrary.UI
             services.AddScoped<IBookService, BookService>();
             services.AddScoped<IBookRepository, BookRepository>();
             services.AddSingleton(AutoMapperConfig.Initialize()); // zwraca IMapper z AutoMapperConfig
-            //services.AddScoped<IUserService, UserService>();
-            //services.AddScoped<IUserRepository, UserRepository>();
+
 
             ///Tymczasowo dla views
             services.AddDbContext<LibraryDbContext>(options => options.UseSqlite(Configuration.GetConnectionString("LibraryDBContext"), options => options.MigrationsAssembly("ProgLibrary.Core")));
-
+            
             services.AddHttpClient("api", c =>
             {
                 c.BaseAddress = new Uri(Configuration["API:Addres"]);
-                //c.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer");
             });
             services.AddAuthentication(options =>
             {
@@ -97,7 +92,6 @@ namespace ProgLibrary.UI
                 };
             });
           
-            //services.AddSingleton<IJwtHandler, JwtHandler>(); //JwtBearer Tokens Handler
             services.AddAuthorization(policies =>
             {
                 policies.AddPolicy("HasAdminRole", role => role.RequireRole("admin"));
@@ -132,7 +126,7 @@ namespace ProgLibrary.UI
                 .AddJsonOptions(options => options.JsonSerializerOptions.WriteIndented = true); // poprawa formatowania json
             services.AddSession();
             services.AddHttpContextAccessor();
-            
+           
 
         }
 
