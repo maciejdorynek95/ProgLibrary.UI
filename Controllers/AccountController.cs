@@ -1,9 +1,11 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ProgLibrary.Infrastructure.Commands.User;
 using ProgLibrary.Infrastructure.DTO;
 using ProgLibrary.Infrastructure.Services;
+using ProgLibrary.Infrastructure.ViewModels;
 using System;
 using System.Net.Http.Json;
 using System.Threading.Tasks;
@@ -14,9 +16,13 @@ namespace ProgLibrary.UI.Controllers
     public class AccountController : Controller
     {
         private readonly IBrokerService _brokerService;
-        public AccountController(IBrokerService brokerService)
+
+        private readonly IMapper _mapper;
+        public AccountController(IBrokerService brokerService, IMapper mapper)
         {
             _brokerService = brokerService;
+      
+            _mapper = mapper;
         }
         // GET: LoginController
         public ActionResult Index()
@@ -24,11 +30,14 @@ namespace ProgLibrary.UI.Controllers
             return View();
         }
 
-        // GET: LoginController/Details/5
+        // GET: LoginController/Details/Guid
         [HttpGet]
-        public ActionResult Details(Guid userId)
+        public async Task<IActionResult> Details(Guid userId)
         {
-            return View();
+            var client = await _brokerService.Create(HttpContext);
+            var response = await _brokerService.SendJsonAsync(client, "Account/Get", userId);
+            var user = await response.Content.ReadFromJsonAsync<AccountDto>();
+            return View(_mapper.Map<AccountViewModel>(user));
         }
 
         // GET: LoginController/Create

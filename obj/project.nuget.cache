@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "hW8kuVSkyx68Pw0nZJBmcY1rFmpmd4QUgP2EH4I7HwNQJOwQUW9r8ADoVj4rNynP+pvmwmqO38QRbfQmYx5B6A==",
+  "dgSpecHash": "HkRWK0inllOVrHoU+3gsgL/8y9+5nXAvzog2v8NnTS5XdQeJOcGllWb6EmM3vwrQcWa35YlhJKU4llVsmAPCcA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\dorynekm\\Source\\Repos\\maciejdorynek95\\ProgLibrary.UI\\ProgLibrary.UI.csproj",
+  "projectFilePath": "C:\\Users\\dorynekm\\source\\repos\\maciejdorynek95\\ProgLibrary.UI\\ProgLibrary.UI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\dorynekm\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\dorynekm\\.nuget\\packages\\azure.core\\1.4.1\\azure.core.1.4.1.nupkg.sha512",

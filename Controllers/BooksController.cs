@@ -2,10 +2,12 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ProgLibrary.Infrastructure.Commands.Books;
+using ProgLibrary.Infrastructure.DTO;
 using ProgLibrary.Infrastructure.Services;
 using ProgLibrary.Infrastructure.ViewModels;
 using System;
 using System.Collections.Generic;
+using System.Net.Http.Json;
 using System.Threading.Tasks;
 
 namespace ProgLibrary.UI.Controllers
@@ -27,16 +29,27 @@ namespace ProgLibrary.UI.Controllers
 
         public async Task<IActionResult> Index()
         {
-            var books = await _bookService.BrowseAsync();
+            var client = await _brokerService.Create(HttpContext);
+            var response = await _brokerService.SendJsonAsync(client, "Books/Get", "");
+            var books = await response.Content.ReadFromJsonAsync<IEnumerable<BookDto>>();
             return View(_mapper.Map<IEnumerable<BookViewModel>>(books));
+
         }
 
 
         public async Task<IActionResult> Details(Guid id)
         {
-             var book = await _bookService.GetAsync(id);
+
+            var client = await _brokerService.Create(HttpContext);
+            var response = await _brokerService.SendJsonAsync(client, "Books/Get/bookId", id);
+            var book = await response.Content.ReadFromJsonAsync<BookDetailsDto>();
             return View(_mapper.Map<BookDetailsViewModel>(book));
+
+
+
         }
+
+     
 
 
 

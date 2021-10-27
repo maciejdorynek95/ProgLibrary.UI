@@ -36,8 +36,4 @@
     <ProjectReference Include="..\ProgLibrary.Infrastructure\ProgLibrary.Infrastructure.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Views\Account\" />
-  </ItemGroup>
-
 </Project>

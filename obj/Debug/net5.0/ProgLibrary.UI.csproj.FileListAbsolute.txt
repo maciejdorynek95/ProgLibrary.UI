@@ -489,3 +489,4 @@ C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\obj\Debug\net5.0\R
 C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\obj\Debug\net5.0\Razor\Views\Books\Delete.cshtml.g.cs
 C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\obj\Debug\net5.0\Razor\Views\Books\Index.cshtml.g.cs
 C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\obj\Debug\net5.0\Razor\Views\Books\Details.cshtml.g.cs
+C:\Users\dorynekm\source\repos\maciejdorynek95\ProgLibrary.UI\obj\Debug\net5.0\Razor\Views\Account\Index.cshtml.g.cs

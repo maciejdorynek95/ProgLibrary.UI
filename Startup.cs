@@ -64,8 +64,10 @@ namespace ProgLibrary.UI
             services.AddScoped<IBookService, BookService>();
             services.AddScoped<IBookRepository, BookRepository>();
             services.AddSingleton(AutoMapperConfig.Initialize()); // zwraca IMapper z AutoMapperConfig
+            //services.AddScoped<IUserService, UserService>();
+            //services.AddScoped<IUserRepository, UserRepository>();
 
-
+            ///Tymczasowo dla views
             services.AddDbContext<LibraryDbContext>(options => options.UseSqlite(Configuration.GetConnectionString("LibraryDBContext"), options => options.MigrationsAssembly("ProgLibrary.Core")));
 
             services.AddHttpClient("api", c =>
