@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc.Authorization;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -12,7 +13,10 @@ using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
 using ProgLibrary.Core.DAL;
 using ProgLibrary.Core.Domain;
+using ProgLibrary.Core.Repositories;
+using ProgLibrary.Infrastructure.Mappers;
 using ProgLibrary.Infrastructure.Middlewares;
+using ProgLibrary.Infrastructure.Repositories;
 using ProgLibrary.Infrastructure.Services;
 using ProgLibrary.Infrastructure.Services.JwtToken;
 using ProgLibrary.Infrastructure.Settings.JwtToken;
@@ -34,11 +38,7 @@ namespace ProgLibrary.UI
         public void ConfigureServices(IServiceCollection services)
         {
             //services.AddMvc();
-            services.AddRazorPages(options =>
-            {
-                //options.Conventions.AuthorizeAreaFolder("Identity", "/Account/Manage");
-                //options.Conventions.AuthorizeAreaPage("Identity", "/Account/Logout");
-            });
+       
 
             services.AddSession(options =>
             {
@@ -61,7 +61,12 @@ namespace ProgLibrary.UI
            
             services.AddSingleton<IJwtHandler, JwtHandler>(); //JwtBearer Tokens Handler
             services.AddSingleton<IBrokerService, BrokerService>();
-            //services.AddDistributedMemoryCache();
+            services.AddScoped<IBookService, BookService>();
+            services.AddScoped<IBookRepository, BookRepository>();
+            services.AddSingleton(AutoMapperConfig.Initialize()); // zwraca IMapper z AutoMapperConfig
+
+
+            services.AddDbContext<LibraryDbContext>(options => options.UseSqlite(Configuration.GetConnectionString("LibraryDBContext"), options => options.MigrationsAssembly("ProgLibrary.Core")));
 
             services.AddHttpClient("api", c =>
             {
@@ -108,13 +113,18 @@ namespace ProgLibrary.UI
                 //etc
             });
 
-            services.AddControllersWithViews(options =>
-            {
-                //var policy = new AuthorizationPolicyBuilder(JwtBearerDefaults.AuthenticationScheme)
-                //    //.RequireAuthenticatedUser()
-                //    .Build();
-                //options.Filters.Add(new AuthorizeFilter(policy));
-            });
+            services.AddControllersWithViews();
+            //var policy = new AuthorizationPolicyBuilder(JwtBearerDefaults.AuthenticationScheme)
+            //    //.RequireAuthenticatedUser()
+            //    .Build();
+            //options.Filters.Add(new AuthorizeFilter(policy));
+          
+            //services.AddRazorPages(options =>
+            //{
+            //    //options.Conventions.AuthorizeAreaFolder("Identity", "/Account/Manage");
+            //    //options.Conventions.AuthorizeAreaPage("Identity", "/Account/Logout");
+            //});
+
             services.AddRazorPages()
                  //.AddMicrosoftIdentityUI()
                 .AddJsonOptions(options => options.JsonSerializerOptions.WriteIndented = true); // poprawa formatowania json

@@ -480,4 +480,12 @@ C:\Users\dorynekm\source\repos\maciejdorynek95\ProgLibrary.UI\obj\Debug\net5.0\R
 C:\Users\dorynekm\source\repos\maciejdorynek95\ProgLibrary.UI\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.cshtml.g.cs
 C:\Users\dorynekm\source\repos\maciejdorynek95\ProgLibrary.UI\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
 C:\Users\dorynekm\source\repos\maciejdorynek95\ProgLibrary.UI\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ViewStart.cshtml.g.cs
-C:\Users\dorynekm\source\repos\maciejdorynek95\ProgLibrary.UI\bin\Debug\net5.0\RestSharp.dll
+C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\obj\Debug\net5.0\Razor\Views\Books\Create.cshtml.g.cs
+C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\obj\Debug\net5.0\Razor\Views\Reservations\Create.cshtml.g.cs
+C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\obj\Debug\net5.0\Razor\Views\Reservations\Delete.cshtml.g.cs
+C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\obj\Debug\net5.0\Razor\Views\Reservations\Details.cshtml.g.cs
+C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\obj\Debug\net5.0\Razor\Views\Reservations\Edit.cshtml.g.cs
+C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\obj\Debug\net5.0\Razor\Views\Reservations\Index.cshtml.g.cs
+C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\obj\Debug\net5.0\Razor\Views\Books\Delete.cshtml.g.cs
+C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\obj\Debug\net5.0\Razor\Views\Books\Index.cshtml.g.cs
+C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\obj\Debug\net5.0\Razor\Views\Books\Details.cshtml.g.cs

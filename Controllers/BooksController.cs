@@ -1,53 +1,81 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ProgLibrary.Infrastructure.Commands.Books;
 using ProgLibrary.Infrastructure.Services;
-using ProgLibrary.Infrastructure.Settings.JwtToken;
+using ProgLibrary.Infrastructure.ViewModels;
 using System;
-using System.Net.Http;
-using System.Net.Http.Json;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace ProgLibrary.UI.Controllers
 {
-    [Route("[controller]")]
+    //[Route("[controller]")]
     public class BooksController : Controller
     {
 
         private readonly IBrokerService _brokerService;
-        public BooksController(IBrokerService brokerService)
+        private readonly IBookService _bookService;
+        private readonly IMapper _mapper;
+
+        public BooksController(IBrokerService brokerService, IBookService bookService, IMapper mapper)
         {
             _brokerService = brokerService;
-
+            _bookService = bookService;
+            _mapper = mapper;
         }
-        // GET: BooksController
-        public ActionResult Index()
+
+        public async Task<IActionResult> Index()
+        {
+            var books = await _bookService.BrowseAsync();
+            return View(_mapper.Map<IEnumerable<BookViewModel>>(books));
+        }
+
+
+        public async Task<IActionResult> Details(Guid id)
+        {
+             var book = await _bookService.GetAsync(id);
+            return View(_mapper.Map<BookDetailsViewModel>(book));
+        }
+
+
+
+        [HttpGet]
+        public IActionResult Create()
         {
             return View();
         }
 
-        // GET: BooksController/Details/5
-        public ActionResult Details(int id)
-        {
-            return View();
-        }
 
-        // POST: BooksController/Create
-        [HttpPost("Create")]
+        [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(CreateBook command)
         {
             var client = await _brokerService.Create(HttpContext);
             var response = await _brokerService.SendJsonAsync(client, "Books/Create", command);
-            return Ok($"Dodano: {await response.Content.ReadAsStringAsync()}");
-            
+            if (!response.IsSuccessStatusCode)
+            {
+                return View("Error", command);
+            }
+            ViewBag.Book = command;
+            return View();
+
         }
 
-        
 
-        // POST: BooksController/Create
+
+
+
+
+        public IActionResult Edit(Guid id)
+        {
+            return View(_bookService.GetAsync(id));
+        }
+
+
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public IActionResult Edit(Guid id, IFormCollection collection)
         {
             try
             {
@@ -59,46 +87,13 @@ namespace ProgLibrary.UI.Controllers
             }
         }
 
-        // GET: BooksController/Edit/5
-        public ActionResult Edit(int id)
+
+        public async Task<IActionResult> Delete(Guid id)
         {
+            await _bookService.DeleteAsync(id);
             return View();
         }
 
-        // POST: BooksController/Edit/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
 
-        // GET: BooksController/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: BooksController/Delete/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
     }
 }

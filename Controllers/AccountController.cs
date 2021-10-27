@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using ProgLibrary.Infrastructure.Commands.User;
 using ProgLibrary.Infrastructure.DTO;
 using ProgLibrary.Infrastructure.Services;
+using System;
 using System.Net.Http.Json;
 using System.Threading.Tasks;
 
@@ -24,7 +25,8 @@ namespace ProgLibrary.UI.Controllers
         }
 
         // GET: LoginController/Details/5
-        public ActionResult Details(int id)
+        [HttpGet]
+        public ActionResult Details(Guid userId)
         {
             return View();
         }
