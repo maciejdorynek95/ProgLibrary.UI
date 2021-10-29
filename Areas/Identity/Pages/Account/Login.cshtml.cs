@@ -12,6 +12,10 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 using ProgLibrary.Core.Domain;
+using ProgLibrary.Infrastructure.Services;
+using System.Net.Http.Json;
+using ProgLibrary.Infrastructure.DTO;
+using Microsoft.AspNetCore.Http;
 
 namespace ProgLibrary.UI.Areas.Identity.Pages.Account
 {
@@ -21,14 +25,16 @@ namespace ProgLibrary.UI.Areas.Identity.Pages.Account
         private readonly UserManager<User> _userManager;
         private readonly SignInManager<User> _signInManager;
         private readonly ILogger<LoginModel> _logger;
+        private readonly IBrokerService _brokerService;
 
         public LoginModel(SignInManager<User> signInManager, 
-            ILogger<LoginModel> logger,
-            UserManager<User> userManager)
+            ILogger<LoginModel> logger, UserManager<User> userManager,
+            IBrokerService brokerService)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _logger = logger;
+            _brokerService = brokerService;
         }
 
         [BindProperty]
@@ -86,6 +92,24 @@ namespace ProgLibrary.UI.Areas.Identity.Pages.Account
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User logged in.");
+                  
+                    var command = new
+                    {
+                        Email = Input.Email,
+                        Password = Input.Password
+                    };
+
+                    var client = await _brokerService.Create(HttpContext);
+                    var response = await _brokerService.SendJsonAsync(client, "Account/login", command);
+                 
+                    var jwt = await response.Content.ReadFromJsonAsync<TokenDto>();
+                    Response.HttpContext.Session.SetString("Token", jwt.Token);
+                    ModelState.AddModelError(string.Empty, jwt.Token);
+
+
+
+                    //return RedirectToAction("Login", "Account", command);
+                    
                     return LocalRedirect(returnUrl);
                 }
                 if (result.RequiresTwoFactor)

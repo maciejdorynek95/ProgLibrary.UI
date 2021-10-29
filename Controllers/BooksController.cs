@@ -1,4 +1,6 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ProgLibrary.Infrastructure.Commands.Books;
@@ -12,20 +14,21 @@ using System.Threading.Tasks;
 
 namespace ProgLibrary.UI.Controllers
 {
-    //[Route("[controller]")]
+    [Route("[controller]")]
     public class BooksController : Controller
     {
 
         private readonly IBrokerService _brokerService;
-        private readonly IBookService _bookService;
+
         private readonly IMapper _mapper;
-        public BooksController(IBrokerService brokerService, IBookService bookService, IMapper mapper)
+        public BooksController(IBrokerService brokerService, IMapper mapper)
         {
             _brokerService = brokerService;
-            _bookService = bookService;
+
             _mapper = mapper;
         }
-
+        [HttpGet]
+        [Route("Show")]
         public async Task<IActionResult> Index()
         {
             var client = await _brokerService.Create(HttpContext);
@@ -34,7 +37,7 @@ namespace ProgLibrary.UI.Controllers
             return View(_mapper.Map<IEnumerable<BookViewModel>>(books));
 
         }
-
+        [HttpGet("Details")]
         public async Task<IActionResult> Details(Guid id)
         {
 
@@ -43,17 +46,19 @@ namespace ProgLibrary.UI.Controllers
             var book = await response.Content.ReadFromJsonAsync<BookDetailsDto>();
             return View(_mapper.Map<BookDetailsViewModel>(book));
         }
-
         [HttpGet]
+        [Authorize("HasAdminRole")]
+        [Route("Create")]
         public IActionResult Create()
         {
             return View();
         }
 
 
-        [HttpPost]
+        [HttpGet("Create/{command}")]
+        [Authorize("HasAdminRole")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(CreateBook command)
+        private async Task<IActionResult> Create(CreateBook command)
         {
             var client = await _brokerService.Create(HttpContext);
             var response = await _brokerService.SendJsonAsync(client, "Books/Create", command);
@@ -66,9 +71,23 @@ namespace ProgLibrary.UI.Controllers
 
         }
 
+        [HttpGet("Edit")]
+        [Authorize("HasAdminRole")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(Guid id)
+        {
+            var client = await _brokerService.Create(HttpContext);
+            var response = await _brokerService.SendJsonAsync(client, "Books/Get", id);
+          
+            if (!response.IsSuccessStatusCode)
+            {
+                return View("Error", id);
+            }
+            var book = await response.Content.ReadFromJsonAsync<BookDto>();
+            return View(_mapper.Map<BookViewModel>(book));
+        }
 
-
-        [HttpGet]
+        [Authorize("HasAdminRole")]
         [ValidateAntiForgeryToken]
         public  IActionResult Update()
         {
@@ -76,6 +95,7 @@ namespace ProgLibrary.UI.Controllers
         }
 
         [HttpPost]
+        [Authorize("HasAdminRole")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Update(Guid id)
         {
@@ -86,6 +106,8 @@ namespace ProgLibrary.UI.Controllers
 
         }
 
+        [HttpDelete]
+        [Authorize("HasAdminRole")]
         public async Task<IActionResult> Delete(Guid id)
         {
             var client = await _brokerService.Create(HttpContext);

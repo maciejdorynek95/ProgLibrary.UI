@@ -1,20 +1,14 @@
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using Microsoft.IdentityModel.Tokens;
 using ProgLibrary.Core.DAL;
 using ProgLibrary.Core.Domain;
-using ProgLibrary.Core.Repositories;
 using ProgLibrary.Infrastructure.Mappers;
-using ProgLibrary.Infrastructure.Repositories;
 using ProgLibrary.Infrastructure.Services;
 using ProgLibrary.Infrastructure.Services.JwtToken;
 using ProgLibrary.Infrastructure.Settings.JwtToken;
@@ -35,95 +29,72 @@ namespace ProgLibrary.UI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            //services.AddMvc();
-
-
-            services.AddSession(options =>
-            {
-                options.Cookie.Name = "ProgLibraryUI.Session";
-                options.Cookie.SameSite = SameSiteMode.Lax;
-                options.IdleTimeout = TimeSpan.FromSeconds(60);
-                options.IOTimeout = TimeSpan.FromSeconds(60);
-
-            });
-
-            
-
             services.AddDbContext<AuthenticationDbContext>();
-            services.AddIdentity<User, Role>()
+            services.AddIdentity<User,Role>()
                 .AddEntityFrameworkStores<AuthenticationDbContext>()
-            .AddDefaultTokenProviders();
+                .AddSignInManager()
+                .AddDefaultTokenProviders()
+                .AddRoles<Role>()
+                .AddDefaultUI();
 
-            services.Configure<JwtSettings>(Configuration.GetSection("JWT")); // Bindowanie z sekcji konfiguracji JwtConfig - appsetings.json"   
-           
+            services.Configure<JwtSettings>(Configuration.GetSection("JWT")); // Bindowanie z sekcji konfiguracji JwtConfig - appsetings.json"               
             services.AddSingleton<IJwtHandler, JwtHandler>(); //JwtBearer Tokens Handler
             services.AddSingleton<IBrokerService, BrokerService>();
-            services.AddScoped<IBookService, BookService>();
-            services.AddScoped<IBookRepository, BookRepository>();
+
             services.AddSingleton(AutoMapperConfig.Initialize()); // zwraca IMapper z AutoMapperConfig
 
 
+            //services.AddSession(options =>
+            //{
+            //    options.Cookie.Name = "ProgLibraryUI.Session";
+            //    options.Cookie.SameSite = SameSiteMode.Lax;
+            //    options.IdleTimeout = TimeSpan.FromSeconds(60);
+            //    options.IOTimeout = TimeSpan.FromSeconds(60);
+
+            //});
+
             ///Tymczasowo dla views
-            services.AddDbContext<LibraryDbContext>(options => options.UseSqlite(Configuration.GetConnectionString("LibraryDBContext"), options => options.MigrationsAssembly("ProgLibrary.Core")));
-            
+            //services.AddDbContext<LibraryDbContext>(options => options.UseSqlite(Configuration.GetConnectionString("LibraryDBContext"), options => options.MigrationsAssembly("ProgLibrary.Core")));
+
             services.AddHttpClient("api", c =>
             {
                 c.BaseAddress = new Uri(Configuration["API:Addres"]);
             });
-            services.AddAuthentication(options =>
+            services.AddAuthentication().AddCookie(options =>
             {
-                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-                options.DefaultSignInScheme = JwtBearerDefaults.AuthenticationScheme;
-                options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
-                
-            }).AddJwtBearer(options =>
-            {
-                options.RequireHttpsMetadata = false;
-                options.SaveToken = false;
-                options.Audience = Configuration["JWT:Audience"];
-                options.Authority = Configuration["JWT:Authority"];
-
-                options.TokenValidationParameters = new TokenValidationParameters
-                {
-                    ValidIssuer = Configuration["JWT:Issuer"],
-                    ValidateAudience = false,
-                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["JWT:SecretKey"]))
-                };
+                options.LoginPath = "/Account/Unauthorized/";
+                options.AccessDeniedPath = "/Account/Forbidden/";
             });
-          
+
+
+
+        
+
+            services.AddControllersWithViews();
+
             services.AddAuthorization(policies =>
             {
                 policies.AddPolicy("HasAdminRole", role => role.RequireRole("admin"));
                 policies.AddPolicy("HasUserRole", role => role.RequireRole("user"));
                 policies.AddPolicy("HasSuperAdminRole", role => role.RequireRole("superadmin"));
-                var defaultAuthorizationPolicyBuilder = new AuthorizationPolicyBuilder(
-                   JwtBearerDefaults.AuthenticationScheme);
-                policies.DefaultPolicy = defaultAuthorizationPolicyBuilder.RequireAuthenticatedUser().Build();
+                
+             
             });
 
             services.AddLogging(config =>
             {
                 config.AddDebug();
                 config.AddConsole();
-                //etc
+
             });
 
-            services.AddControllersWithViews();
-            //var policy = new AuthorizationPolicyBuilder(JwtBearerDefaults.AuthenticationScheme)
-            //    //.RequireAuthenticatedUser()
-            //    .Build();
-            //options.Filters.Add(new AuthorizeFilter(policy));
-          
-            //services.AddRazorPages(options =>
-            //{
-            //    //options.Conventions.AuthorizeAreaFolder("Identity", "/Account/Manage");
-            //    //options.Conventions.AuthorizeAreaPage("Identity", "/Account/Logout");
-            //});
 
-            services.AddRazorPages()
-                 //.AddMicrosoftIdentityUI()
-                .AddJsonOptions(options => options.JsonSerializerOptions.WriteIndented = true); // poprawa formatowania json
+
+            services.AddRazorPages(options =>
+            {
+                options.Conventions.AuthorizeAreaFolder("Identity", "/Account/Manage");
+                options.Conventions.AuthorizeAreaPage("Identity", "/Account/Logout");
+            }).AddJsonOptions(options => options.JsonSerializerOptions.WriteIndented = true);       
             services.AddSession();
             services.AddHttpContextAccessor();
            
@@ -144,16 +115,15 @@ namespace ProgLibrary.UI
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 //app.UseHsts();
             }
+
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-
             app.UseSession();
             app.UseRouting();
-
             app.UseAuthentication();
             app.UseAuthorization();
             //app.UseMiddleware<PreRequestModifications>();
-            
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(

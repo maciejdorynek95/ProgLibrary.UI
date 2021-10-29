@@ -1,7 +1,6 @@
-﻿using System;
+﻿
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.UI;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -16,6 +15,11 @@ namespace ProgLibrary.UI.Areas.Identity
         public void Configure(IWebHostBuilder builder)
         {
             builder.ConfigureServices((context, services) => {
+                services.AddDbContext<AuthenticationDbContext>(options =>
+                    options.UseSqlite(
+                        context.Configuration.GetConnectionString("LibraryDBContext")));
+
+              
             });
         }
     }
