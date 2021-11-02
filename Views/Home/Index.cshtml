@@ -3,6 +3,45 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Witaj</h1>
+    <h5> Oto UI do API </h5>
+    <p> Aplikacja tworzona na potrzeby rekrutacyjne na stanowisko Junior .NET</p>
+</div>
+<div class="row">
+    <div class="col-4">
+        <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+            <div class="card-header">Książki</div>
+            <div class="card-body">
+                <h5 class="card-title">Wywołaj IEnumerable z API</h5>
+                <p class="card-text">Potrzeba Tokenu Bearer</p>
+            </div>
+            <div class="card-footer">
+                <button type="button" class="btn btn-primary" value="Books" onclick="location.href = '@Url.Action("Index","Books")'">Przejdź</button> 
+            </div>
+        </div>
+    </div>
+    <div class="col-4">
+        <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
+            <div class="card-header">Rezerwacje</div>
+            <div class="card-body">
+                <h5 class="card-title">Wywołaj IEnumerable z API</h5>
+                <p class="card-text">Potrzeba Tokenu Bearer</p>
+            </div>
+            <div class="card-footer">
+                <button type="button" class="btn btn-primary" value="Reservations" onclick="location.href = '@Url.Action("Index","Reservations")'">Przejdź</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-4">
+        <div class="card bg-light mb-3" style="max-width: 18rem;">
+            <div class="card-header">Uzytkownicy</div>
+            <div class="card-body">
+                <h5 class="card-title">Wywołaj IEnumerable z API</h5>
+                <p class="card-text">Potrzeba Tokenu Bearer</p>
+            </div>
+            <div class="card-footer">
+                <button type="button" class="btn btn-primary" value="Users" onclick="location.href = '@Url.Action("Index","Account")'">Przejdź</button>
+            </div>
+        </div>
+    </div>
 </div>

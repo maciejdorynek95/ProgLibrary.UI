@@ -1,5 +1,4 @@
 ﻿using AutoMapper;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -7,9 +6,13 @@ using ProgLibrary.Infrastructure.Commands.Books;
 using ProgLibrary.Infrastructure.DTO;
 using ProgLibrary.Infrastructure.Services;
 using ProgLibrary.Infrastructure.ViewModels;
+using ProgLibrary.UI.Models;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
 using System.Net.Http.Json;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace ProgLibrary.UI.Controllers
@@ -21,97 +24,106 @@ namespace ProgLibrary.UI.Controllers
         private readonly IBrokerService _brokerService;
 
         private readonly IMapper _mapper;
+       
         public BooksController(IBrokerService brokerService, IMapper mapper)
         {
             _brokerService = brokerService;
 
             _mapper = mapper;
+          
         }
+
         [HttpGet]
-        [Route("Show")]
+        [Authorize("HasUserRole")]
         public async Task<IActionResult> Index()
         {
             var client = await _brokerService.Create(HttpContext);
-            var response = await _brokerService.SendJsonAsync(client, "Books/Get", "");
-            var books = await response.Content.ReadFromJsonAsync<IEnumerable<BookDto>>();
-            return View(_mapper.Map<IEnumerable<BookViewModel>>(books));
-
+            var response2 = await client.GetFromJsonAsync<IEnumerable<BookDto>>("Books/Get");
+            return View(_mapper.Map<IEnumerable<BookViewModel>>(response2));
         }
-        [HttpGet("Details")]
+
+
+        [HttpGet("{id}")]
+        [Route("[Action]")]
+        [Authorize("HasUserRole")]
         public async Task<IActionResult> Details(Guid id)
         {
-
             var client = await _brokerService.Create(HttpContext);
-            var response = await _brokerService.SendJsonAsync(client, "Books/Get/bookId", id);
-            var book = await response.Content.ReadFromJsonAsync<BookDetailsDto>();
-            return View(_mapper.Map<BookDetailsViewModel>(book));
+            var response2 = await client.GetFromJsonAsync<BookDetailsDto>($"Books/Get/{id}");
+            return View(_mapper.Map<BookDetailsViewModel>(response2));
         }
+
+
         [HttpGet]
+        [Route("[Action]")]
         [Authorize("HasAdminRole")]
-        [Route("Create")]
         public IActionResult Create()
         {
             return View();
         }
 
-
-        [HttpGet("Create/{command}")]
+        [HttpPost]
+        [Route("[Action]")]
         [Authorize("HasAdminRole")]
-        [ValidateAntiForgeryToken]
-        private async Task<IActionResult> Create(CreateBook command)
+        public async Task<IActionResult> Create(CreateBook command)
         {
             var client = await _brokerService.Create(HttpContext);
-            var response = await _brokerService.SendJsonAsync(client, "Books/Create", command);
-            if (!response.IsSuccessStatusCode)
-            {
-                return View("Error", command);
-            }
-            ViewBag.CreatedBook = command;
+            var response = Task.FromResult(await client.PostAsJsonAsync("Books/Create", command));
+            ViewBag.Result = await response.Result.Content.ReadAsStringAsync();
             return View();
 
         }
 
-        [HttpGet("Edit")]
+        [HttpGet("{id}")]
+        [Route("[Action]")]
         [Authorize("HasAdminRole")]
-        [ValidateAntiForgeryToken]
+
         public async Task<IActionResult> Edit(Guid id)
         {
             var client = await _brokerService.Create(HttpContext);
-            var response = await _brokerService.SendJsonAsync(client, "Books/Get", id);
-          
-            if (!response.IsSuccessStatusCode)
+            var response = await client.GetFromJsonAsync<BookDto>($"Books/Get/{id}");
+            if (response != null)
             {
-                return View("Error", id);
+                return View(_mapper.Map<BookViewModel>(response));
             }
-            var book = await response.Content.ReadFromJsonAsync<BookDto>();
-            return View(_mapper.Map<BookViewModel>(book));
+            return NotFound();
         }
 
+        [HttpPut("{id}")]
+        [Route("[Action]")]
         [Authorize("HasAdminRole")]
-        [ValidateAntiForgeryToken]
-        public  IActionResult Update()
-        {
-            return View();
-        }
 
-        [HttpPost]
-        [Authorize("HasAdminRole")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Update(Guid id)
+        public async Task<IActionResult> Update(Guid id,UpdateBook book )
         {
             var client = await _brokerService.Create(HttpContext);
-            var response = await _brokerService.SendJsonAsync(client, "Books/Edit/bookId", id);
-            var book = await response.Content.ReadFromJsonAsync<BookDetailsDto>();
-            return View(_mapper.Map<BookDetailsViewModel>(book));
+            var response = await client.PutAsJsonAsync($"Books/Update/{id}",book);
+            response.EnsureSuccessStatusCode();
+
+            try
+            {
+                return RedirectToAction(nameof(Edit), new { id = id });
+            }
+            catch (Exception)
+            {
+
+                return View(nameof(Index));
+            }
+
+         
+
+            
+
 
         }
 
-        [HttpDelete]
+
+        [HttpDelete("{id}")]
+        [Route("[Action]")]
         [Authorize("HasAdminRole")]
         public async Task<IActionResult> Delete(Guid id)
         {
             var client = await _brokerService.Create(HttpContext);
-            var response = await _brokerService.SendJsonAsync(client, "Books/Delete/bookId", id);
+            var response = await _brokerService.SendJsonPostAsync(client, "Books/Delete", id);
             var book = await response.Content.ReadFromJsonAsync<BookDetailsDto>();
 
             try
@@ -125,9 +137,13 @@ namespace ProgLibrary.UI.Controllers
             }
 
             return Ok();
-
         }
 
-
+        //[AllowAnonymous]
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        public IActionResult Error()
+        {
+            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
     }
 }

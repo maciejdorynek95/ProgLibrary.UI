@@ -1,6 +1,5 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -13,7 +12,6 @@ using ProgLibrary.Infrastructure.Services;
 using ProgLibrary.Infrastructure.Services.JwtToken;
 using ProgLibrary.Infrastructure.Settings.JwtToken;
 using System;
-using System.Text;
 
 namespace ProgLibrary.UI
 {
@@ -33,28 +31,18 @@ namespace ProgLibrary.UI
             services.AddIdentity<User,Role>()
                 .AddEntityFrameworkStores<AuthenticationDbContext>()
                 .AddSignInManager()
-                .AddDefaultTokenProviders()
-                .AddRoles<Role>()
+                .AddDefaultTokenProviders()      
                 .AddDefaultUI();
 
-            services.Configure<JwtSettings>(Configuration.GetSection("JWT")); // Bindowanie z sekcji konfiguracji JwtConfig - appsetings.json"               
+                     //.AddRoles<Role>()
+
+
+
+
+            services.Configure<JwtSettings>(Configuration.GetSection("JWT")); // Bindowanie z sekcji konfiguracji JwtConfig - appsetings.json"         
             services.AddSingleton<IJwtHandler, JwtHandler>(); //JwtBearer Tokens Handler
-            services.AddSingleton<IBrokerService, BrokerService>();
-
+            services.AddScoped<IBrokerService, BrokerService>();
             services.AddSingleton(AutoMapperConfig.Initialize()); // zwraca IMapper z AutoMapperConfig
-
-
-            //services.AddSession(options =>
-            //{
-            //    options.Cookie.Name = "ProgLibraryUI.Session";
-            //    options.Cookie.SameSite = SameSiteMode.Lax;
-            //    options.IdleTimeout = TimeSpan.FromSeconds(60);
-            //    options.IOTimeout = TimeSpan.FromSeconds(60);
-
-            //});
-
-            ///Tymczasowo dla views
-            //services.AddDbContext<LibraryDbContext>(options => options.UseSqlite(Configuration.GetConnectionString("LibraryDBContext"), options => options.MigrationsAssembly("ProgLibrary.Core")));
 
             services.AddHttpClient("api", c =>
             {
@@ -62,13 +50,23 @@ namespace ProgLibrary.UI
             });
             services.AddAuthentication().AddCookie(options =>
             {
-                options.LoginPath = "/Account/Unauthorized/";
-                options.AccessDeniedPath = "/Account/Forbidden/";
+                //options.LoginPath = "/Account/Unauthorized/";
+                //options.AccessDeniedPath = "/Account/Forbidden/";
+                
+            });
+
+            services.ConfigureApplicationCookie(options =>
+            {
+                // Cookie settings
+                options.Cookie.HttpOnly = true;
+                options.ExpireTimeSpan = TimeSpan.FromMinutes(5);
+
+                options.LoginPath = "/Identity/Account/Login";
+                options.AccessDeniedPath = "/Identity/Account/AccessDenied";
+                options.SlidingExpiration = true;
             });
 
 
-
-        
 
             services.AddControllersWithViews();
 
@@ -77,6 +75,7 @@ namespace ProgLibrary.UI
                 policies.AddPolicy("HasAdminRole", role => role.RequireRole("admin"));
                 policies.AddPolicy("HasUserRole", role => role.RequireRole("user"));
                 policies.AddPolicy("HasSuperAdminRole", role => role.RequireRole("superadmin"));
+                
                 
              
             });
@@ -94,6 +93,7 @@ namespace ProgLibrary.UI
             {
                 options.Conventions.AuthorizeAreaFolder("Identity", "/Account/Manage");
                 options.Conventions.AuthorizeAreaPage("Identity", "/Account/Logout");
+                
             }).AddJsonOptions(options => options.JsonSerializerOptions.WriteIndented = true);       
             services.AddSession();
             services.AddHttpContextAccessor();
@@ -122,7 +122,8 @@ namespace ProgLibrary.UI
             app.UseRouting();
             app.UseAuthentication();
             app.UseAuthorization();
-            //app.UseMiddleware<PreRequestModifications>();
+
+
 
             app.UseEndpoints(endpoints =>
             {
@@ -130,6 +131,8 @@ namespace ProgLibrary.UI
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
+
+              
             });
         }
     }

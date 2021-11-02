@@ -40,6 +40,7 @@ namespace ProgLibrary.UI
                 {
                     webBuilder.UseUrls("https://localhost:5005", "https://localhost:44306");
                     webBuilder.UseStartup<Startup>();
+                    
                 });
 
 

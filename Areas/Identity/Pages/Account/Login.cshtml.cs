@@ -1,21 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text.Encodings.Web;
-using System.Threading.Tasks;
+﻿using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 using ProgLibrary.Core.Domain;
-using ProgLibrary.Infrastructure.Services;
-using System.Net.Http.Json;
 using ProgLibrary.Infrastructure.DTO;
-using Microsoft.AspNetCore.Http;
+using ProgLibrary.Infrastructure.Services;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Net.Http.Json;
+using System.Threading.Tasks;
 
 namespace ProgLibrary.UI.Areas.Identity.Pages.Account
 {
@@ -27,7 +24,7 @@ namespace ProgLibrary.UI.Areas.Identity.Pages.Account
         private readonly ILogger<LoginModel> _logger;
         private readonly IBrokerService _brokerService;
 
-        public LoginModel(SignInManager<User> signInManager, 
+        public LoginModel(SignInManager<User> signInManager,
             ILogger<LoginModel> logger, UserManager<User> userManager,
             IBrokerService brokerService)
         {
@@ -57,7 +54,7 @@ namespace ProgLibrary.UI.Areas.Identity.Pages.Account
             [DataType(DataType.Password)]
             public string Password { get; set; }
 
-            [Display(Name = "Remember me?")]
+            [Display(Name = "Zapamiętaj mnie")]
             public bool RememberMe { get; set; }
         }
 
@@ -81,49 +78,31 @@ namespace ProgLibrary.UI.Areas.Identity.Pages.Account
         public async Task<IActionResult> OnPostAsync(string returnUrl = null)
         {
             returnUrl ??= Url.Content("~/");
-
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
-        
             if (ModelState.IsValid)
             {
-                // This doesn't count login failures towards account lockout
-                // To enable password failures to trigger account lockout, set lockoutOnFailure: true
                 var result = await _signInManager.PasswordSignInAsync(Input.Email, Input.Password, Input.RememberMe, lockoutOnFailure: false);
                 if (result.Succeeded)
                 {
-                    _logger.LogInformation("User logged in.");
-                  
+                    _logger.LogInformation("Uzytkownik zalogowany");
                     var command = new
                     {
                         Email = Input.Email,
                         Password = Input.Password
                     };
-
                     var client = await _brokerService.Create(HttpContext);
-                    var response = await _brokerService.SendJsonAsync(client, "Account/login", command);
-                 
+                    var response = await _brokerService.SendJsonPostAsync(client, "Account/Login", command);
                     var jwt = await response.Content.ReadFromJsonAsync<TokenDto>();
+
                     Response.HttpContext.Session.SetString("Token", jwt.Token);
                     ModelState.AddModelError(string.Empty, jwt.Token);
 
-
-
-                    //return RedirectToAction("Login", "Account", command);
-                    
                     return LocalRedirect(returnUrl);
                 }
-                if (result.RequiresTwoFactor)
-                {
-                    return RedirectToPage("./LoginWith2fa", new { ReturnUrl = returnUrl, RememberMe = Input.RememberMe });
-                }
-                if (result.IsLockedOut)
-                {
-                    _logger.LogWarning("User account locked out.");
-                    return RedirectToPage("./Lockout");
-                }
+
                 else
                 {
-                    ModelState.AddModelError(string.Empty, "Invalid login attempt.");
+                    ModelState.AddModelError(string.Empty, "Nieprawidłowe dane logowania");
                     return Page();
                 }
             }
