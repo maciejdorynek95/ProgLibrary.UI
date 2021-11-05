@@ -10,9 +10,7 @@ using ProgLibrary.UI.Models;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Net.Http;
 using System.Net.Http.Json;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace ProgLibrary.UI.Controllers
@@ -122,21 +120,20 @@ namespace ProgLibrary.UI.Controllers
         [Authorize("HasAdminRole")]
         public async Task<IActionResult> Delete(Guid id)
         {
-            var client = await _brokerService.Create(HttpContext);
-            var response = await _brokerService.SendJsonPostAsync(client, "Books/Delete", id);
-            var book = await response.Content.ReadFromJsonAsync<BookDetailsDto>();
-
+            
             try
             {
-                RedirectToAction(nameof(Index));
+                var client = await _brokerService.Create(HttpContext);
+                var response = await client.DeleteAsync($"Books/Delete/{id}");
+                return RedirectToAction(nameof(Index));
             }
             catch (Exception)
             {
 
-                return View();
+                throw;
             }
+            
 
-            return Ok();
         }
 
         //[AllowAnonymous]

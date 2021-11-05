@@ -1385,3 +1385,436 @@ WHERE "a"."RoleId" = @__role_Id_0
 2021-11-02 09:54:04.392 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - -
 2021-11-02 09:54:04.394 +01:00 [INF] Sending file. Request path: '/js/site.js'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\js\site.js'
 2021-11-02 09:54:04.395 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - - - 200 230 application/javascript 2.7532ms
+2021-11-02 19:47:19.476 +01:00 [INF] Staring Web App
+2021-11-02 19:47:25.340 +01:00 [INF] User profile is available. Using 'C:\Users\dorynekm\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-11-02 19:47:26.631 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-11-02 19:47:26.631 +01:00 [INF] Hosting environment: Development
+2021-11-02 19:47:26.631 +01:00 [INF] Content root path: C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI
+2021-11-02 19:47:26.747 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/ - -
+2021-11-02 19:47:26.917 +01:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (user)
+2021-11-02 19:47:26.947 +01:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2021-11-02 19:47:26.997 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/ - - - 302 - - 256.5741ms
+2021-11-02 19:47:27.011 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/Identity/Account/Login?ReturnUrl=%2F - -
+2021-11-02 19:47:27.060 +01:00 [INF] Executing endpoint '/Account/Login'
+2021-11-02 19:47:27.203 +01:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2021-11-02 19:47:27.634 +01:00 [INF] Executing handler method ProgLibrary.UI.Areas.Identity.Pages.Account.LoginModel.OnGetAsync - ModelState is "Valid"
+2021-11-02 19:47:27.652 +01:00 [INF] AuthenticationScheme: Identity.External signed out.
+2021-11-02 19:47:27.654 +01:00 [INF] Executed handler method OnGetAsync, returned result .
+2021-11-02 19:47:27.660 +01:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2021-11-02 19:47:27.661 +01:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2021-11-02 19:47:28.034 +01:00 [INF] Executed page /Account/Login in 819.1708ms
+2021-11-02 19:47:28.034 +01:00 [INF] Executed endpoint '/Account/Login'
+2021-11-02 19:47:28.043 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/Identity/Account/Login?ReturnUrl=%2F - - - 200 - text/html;+charset=utf-8 1031.4827ms
+2021-11-02 19:47:28.120 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/css/bootstrap.min.css - -
+2021-11-02 19:47:28.130 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/lib/jquery/dist/jquery.min.js - -
+2021-11-02 19:47:28.130 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/css/site.css - -
+2021-11-02 19:47:28.131 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/js/bootstrap.bundle.min.js - -
+2021-11-02 19:47:28.145 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/Identity/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js - -
+2021-11-02 19:47:28.202 +01:00 [INF] Sending file. Request path: '/css/site.css'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\css\site.css'
+2021-11-02 19:47:28.203 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - -
+2021-11-02 19:47:28.216 +01:00 [INF] Sending file. Request path: '/js/site.js'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\js\site.js'
+2021-11-02 19:47:28.217 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/Identity/lib/jquery-validation/dist/jquery.validate.js - -
+2021-11-02 19:47:28.229 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/css/site.css - - - 200 1417 text/css 98.5243ms
+2021-11-02 19:47:28.229 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - - - 200 230 application/javascript 25.1465ms
+2021-11-02 19:47:28.237 +01:00 [INF] Sending file. Request path: '/Identity/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js'. Physical path: 'C:\Users\dorynekm\.nuget\packages\microsoft.aspnetcore.identity.ui\5.0.11\staticwebassets\V4\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js'
+2021-11-02 19:47:28.239 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/Identity/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js - - - 200 19366 application/javascript 94.8419ms
+2021-11-02 19:47:28.258 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js'
+2021-11-02 19:47:28.273 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css'
+2021-11-02 19:47:28.280 +01:00 [INF] Sending file. Request path: '/lib/jquery/dist/jquery.min.js'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\lib\jquery\dist\jquery.min.js'
+2021-11-02 19:47:28.307 +01:00 [INF] Sending file. Request path: '/Identity/lib/jquery-validation/dist/jquery.validate.js'. Physical path: 'C:\Users\dorynekm\.nuget\packages\microsoft.aspnetcore.identity.ui\5.0.11\staticwebassets\V4\lib\jquery-validation\dist\jquery.validate.js'
+2021-11-02 19:47:28.311 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/lib/jquery/dist/jquery.min.js - - - 200 89476 application/javascript 180.8799ms
+2021-11-02 19:47:28.311 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/css/bootstrap.min.css - - - 200 155764 text/css 190.8235ms
+2021-11-02 19:47:28.311 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/js/bootstrap.bundle.min.js - - - 200 78641 application/javascript 180.1592ms
+2021-11-02 19:47:28.311 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/Identity/lib/jquery-validation/dist/jquery.validate.js - - - 200 48676 application/javascript 94.2746ms
+2021-11-02 19:47:46.959 +01:00 [INF] Request starting HTTP/2 POST https://localhost:44306/Identity/Account/Login?ReturnUrl=%2F application/x-www-form-urlencoded 277
+2021-11-02 19:47:46.970 +01:00 [INF] Executing endpoint '/Account/Login'
+2021-11-02 19:47:46.972 +01:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2021-11-02 19:47:47.014 +01:00 [INF] Executing handler method ProgLibrary.UI.Areas.Identity.Pages.Account.LoginModel.OnPostAsync - ModelState is "Valid"
+2021-11-02 19:47:48.050 +01:00 [INF] Entity Framework Core 5.0.11 initialized 'AuthenticationDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2021-11-02 19:47:48.742 +01:00 [INF] Executed DbCommand (21ms) [Parameters=[@__normalizedUserName_0='?' (Size = 25)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."AccessFailedCount", "a"."ConcurrencyStamp", "a"."Email", "a"."EmailConfirmed", "a"."LockoutEnabled", "a"."LockoutEnd", "a"."NormalizedEmail", "a"."NormalizedUserName", "a"."PasswordHash", "a"."PhoneNumber", "a"."PhoneNumberConfirmed", "a"."SecurityStamp", "a"."TwoFactorEnabled", "a"."UserName"
+FROM "AspNetUsers" AS "a"
+WHERE "a"."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2021-11-02 19:47:49.036 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__user_Id_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."ClaimType", "a"."ClaimValue", "a"."UserId"
+FROM "AspNetUserClaims" AS "a"
+WHERE "a"."UserId" = @__user_Id_0
+2021-11-02 19:47:49.075 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "a0"."Name"
+FROM "AspNetUserRoles" AS "a"
+INNER JOIN "AspNetRoles" AS "a0" ON "a"."RoleId" = "a0"."Id"
+WHERE "a"."UserId" = @__userId_0
+2021-11-02 19:47:49.088 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedName_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."ConcurrencyStamp", "a"."Name", "a"."NormalizedName"
+FROM "AspNetRoles" AS "a"
+WHERE "a"."NormalizedName" = @__normalizedName_0
+LIMIT 1
+2021-11-02 19:47:49.120 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__role_Id_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."ClaimType", "a"."ClaimValue"
+FROM "AspNetRoleClaims" AS "a"
+WHERE "a"."RoleId" = @__role_Id_0
+2021-11-02 19:47:49.127 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedName_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."ConcurrencyStamp", "a"."Name", "a"."NormalizedName"
+FROM "AspNetRoles" AS "a"
+WHERE "a"."NormalizedName" = @__normalizedName_0
+LIMIT 1
+2021-11-02 19:47:49.132 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__role_Id_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."ClaimType", "a"."ClaimValue"
+FROM "AspNetRoleClaims" AS "a"
+WHERE "a"."RoleId" = @__role_Id_0
+2021-11-02 19:47:49.139 +01:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2021-11-02 19:47:49.140 +01:00 [INF] Uzytkownik zalogowany
+2021-11-02 19:47:49.183 +01:00 [INF] Client: 
+2021-11-02 19:47:49.201 +01:00 [INF] Start processing HTTP request POST "https://localhost:44336/api/Account/Login"
+2021-11-02 19:47:49.202 +01:00 [INF] Sending HTTP request POST "https://localhost:44336/api/Account/Login"
+2021-11-02 19:47:52.630 +01:00 [INF] Received HTTP response headers after 3422.1167ms - 200
+2021-11-02 19:47:52.631 +01:00 [INF] End processing HTTP request after 3433.9423ms - 200
+2021-11-02 19:47:52.638 +01:00 [INF] Response: {
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJQcm9nTGlicmFyeXw1OGNmNGU5OS1jNmM4LTRkMmYtODM3Ny05ZjM5NjZkYWUxODEiLCJuYW1lIjoibWFjaWVqZG9yeW5lazk1QGdtYWlsLmNvbSIsInVuaXF1ZV9uYW1lIjoiNThjZjRlOTktYzZjOC00ZDJmLTgzNzctOWYzOTY2ZGFlMTgxIiwianRpIjoiMzQyZWVhYmUtZDQ0OC00ZDdmLTliMmEtMzdkY2YzYTc0MzY4IiwiaWF0IjoiMTYzNTg4MjQ3MjMzNSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiNThjZjRlOTktYzZjOC00ZDJmLTgzNzctOWYzOTY2ZGFlMTgxIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZSI6Im1hY2llamRvcnluZWs5NUBnbWFpbC5jb20iLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJtYWNpZWpkb3J5bmVrOTVAZ21haWwuY29tIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjpbInVzZXIiLCJhZG1pbiJdLCJuYmYiOjE2MzU4Nzg4NzIsImV4cCI6MTYzNTg4MjQ3MiwiaXNzIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NDQzMzYiLCJhdWQiOiJodHRwczovL2xvY2FsaG9zdDo0NDMzNiJ9.jVreAWySNGS3G4FmadIR2syBVskq5FvUIAqZjJTQI2I",
+  "role": "user, admin",
+  "expires": 1635886072335
+}
+2021-11-02 19:47:52.651 +01:00 [INF] Executed handler method OnPostAsync, returned result Microsoft.AspNetCore.Mvc.LocalRedirectResult.
+2021-11-02 19:47:52.655 +01:00 [INF] Executing LocalRedirectResult, redirecting to /.
+2021-11-02 19:47:52.657 +01:00 [INF] Executed page /Account/Login in 5685.0131ms
+2021-11-02 19:47:52.658 +01:00 [INF] Executed endpoint '/Account/Login'
+2021-11-02 19:47:52.660 +01:00 [INF] Session started; Key:dd621d5e-694b-7d4d-2ffb-9f646b24a750, Id:1c9a5692-2ab3-2a96-013b-193cc7cb0ed4
+2021-11-02 19:47:52.667 +01:00 [INF] Request finished HTTP/2 POST https://localhost:44306/Identity/Account/Login?ReturnUrl=%2F application/x-www-form-urlencoded 277 - 302 - - 5707.6141ms
+2021-11-02 19:47:52.676 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/ - -
+2021-11-02 19:47:52.688 +01:00 [INF] Authorization was successful.
+2021-11-02 19:47:52.688 +01:00 [INF] Executing endpoint 'ProgLibrary.UI.Controllers.HomeController.Index (ProgLibrary.UI)'
+2021-11-02 19:47:52.693 +01:00 [INF] Route matched with {action = "Index", controller = "Home", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller ProgLibrary.UI.Controllers.HomeController (ProgLibrary.UI).
+2021-11-02 19:47:52.698 +01:00 [INF] Executing ViewResult, running view Index.
+2021-11-02 19:47:52.717 +01:00 [INF] Executed ViewResult - view Index executed in 15.2647ms.
+2021-11-02 19:47:52.718 +01:00 [INF] Executed action ProgLibrary.UI.Controllers.HomeController.Index (ProgLibrary.UI) in 24.1749ms
+2021-11-02 19:47:52.719 +01:00 [INF] Executed endpoint 'ProgLibrary.UI.Controllers.HomeController.Index (ProgLibrary.UI)'
+2021-11-02 19:47:52.720 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/ - - - 200 - text/html;+charset=utf-8 43.6782ms
+2021-11-02 19:47:52.811 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/css/bootstrap.min.css - -
+2021-11-02 19:47:52.811 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/lib/jquery/dist/jquery.min.js - -
+2021-11-02 19:47:52.818 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/js/bootstrap.bundle.min.js - -
+2021-11-02 19:47:52.821 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - -
+2021-11-02 19:47:52.839 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/css/site.css - -
+2021-11-02 19:47:52.844 +01:00 [INF] Sending file. Request path: '/js/site.js'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\js\site.js'
+2021-11-02 19:47:52.845 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - - - 200 230 application/javascript 24.2544ms
+2021-11-02 19:47:52.851 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js'
+2021-11-02 19:47:52.852 +01:00 [INF] Sending file. Request path: '/css/site.css'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\css\site.css'
+2021-11-02 19:47:52.853 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/css/site.css - - - 200 1417 text/css 13.7078ms
+2021-11-02 19:47:52.856 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css'
+2021-11-02 19:47:52.856 +01:00 [INF] Sending file. Request path: '/lib/jquery/dist/jquery.min.js'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\lib\jquery\dist\jquery.min.js'
+2021-11-02 19:47:52.905 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/css/bootstrap.min.css - - - 200 155764 text/css 94.3483ms
+2021-11-02 19:47:52.905 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/lib/jquery/dist/jquery.min.js - - - 200 89476 application/javascript 94.1811ms
+2021-11-02 19:47:52.911 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/js/bootstrap.bundle.min.js - - - 200 78641 application/javascript 99.0580ms
+2021-11-02 19:51:08.489 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/Books - -
+2021-11-02 19:51:08.501 +01:00 [INF] Authorization was successful.
+2021-11-02 19:51:08.502 +01:00 [INF] Executing endpoint 'ProgLibrary.UI.Controllers.BooksController.Index (ProgLibrary.UI)'
+2021-11-02 19:51:08.509 +01:00 [INF] Route matched with {action = "Index", controller = "Books", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller ProgLibrary.UI.Controllers.BooksController (ProgLibrary.UI).
+2021-11-02 19:51:08.514 +01:00 [INF] Client: Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJQcm9nTGlicmFyeXw1OGNmNGU5OS1jNmM4LTRkMmYtODM3Ny05ZjM5NjZkYWUxODEiLCJuYW1lIjoibWFjaWVqZG9yeW5lazk1QGdtYWlsLmNvbSIsInVuaXF1ZV9uYW1lIjoiNThjZjRlOTktYzZjOC00ZDJmLTgzNzctOWYzOTY2ZGFlMTgxIiwianRpIjoiMzQyZWVhYmUtZDQ0OC00ZDdmLTliMmEtMzdkY2YzYTc0MzY4IiwiaWF0IjoiMTYzNTg4MjQ3MjMzNSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiNThjZjRlOTktYzZjOC00ZDJmLTgzNzctOWYzOTY2ZGFlMTgxIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZSI6Im1hY2llamRvcnluZWs5NUBnbWFpbC5jb20iLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJtYWNpZWpkb3J5bmVrOTVAZ21haWwuY29tIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjpbInVzZXIiLCJhZG1pbiJdLCJuYmYiOjE2MzU4Nzg4NzIsImV4cCI6MTYzNTg4MjQ3MiwiaXNzIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NDQzMzYiLCJhdWQiOiJodHRwczovL2xvY2FsaG9zdDo0NDMzNiJ9.jVreAWySNGS3G4FmadIR2syBVskq5FvUIAqZjJTQI2I
+
+2021-11-02 19:51:08.515 +01:00 [INF] Start processing HTTP request GET "https://localhost:44336/api/Books/Get"
+2021-11-02 19:51:08.515 +01:00 [INF] Sending HTTP request GET "https://localhost:44336/api/Books/Get"
+2021-11-02 19:51:08.932 +01:00 [INF] Received HTTP response headers after 416.8954ms - 200
+2021-11-02 19:51:08.932 +01:00 [INF] End processing HTTP request after 417.4428ms - 200
+2021-11-02 19:51:09.026 +01:00 [INF] Executing ViewResult, running view Index.
+2021-11-02 19:51:09.139 +01:00 [INF] Executed ViewResult - view Index executed in 114.4915ms.
+2021-11-02 19:51:09.140 +01:00 [INF] Executed action ProgLibrary.UI.Controllers.BooksController.Index (ProgLibrary.UI) in 630.7732ms
+2021-11-02 19:51:09.140 +01:00 [INF] Executed endpoint 'ProgLibrary.UI.Controllers.BooksController.Index (ProgLibrary.UI)'
+2021-11-02 19:51:09.141 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/Books - - - 200 - text/html;+charset=utf-8 652.3019ms
+2021-11-02 19:51:09.237 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/css/bootstrap.min.css - -
+2021-11-02 19:51:09.238 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - -
+2021-11-02 19:51:09.239 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/css/site.css - -
+2021-11-02 19:51:09.245 +01:00 [INF] Sending file. Request path: '/js/site.js'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\js\site.js'
+2021-11-02 19:51:09.245 +01:00 [INF] Sending file. Request path: '/css/site.css'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\css\site.css'
+2021-11-02 19:51:09.246 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/lib/jquery/dist/jquery.min.js - -
+2021-11-02 19:51:09.246 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/css/site.css - - - 200 1417 text/css 7.2540ms
+2021-11-02 19:51:09.246 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - - - 200 230 application/javascript 8.0790ms
+2021-11-02 19:51:09.247 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/js/bootstrap.bundle.min.js - -
+2021-11-02 19:51:09.255 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css'
+2021-11-02 19:51:09.260 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js'
+2021-11-02 19:51:09.263 +01:00 [INF] Sending file. Request path: '/lib/jquery/dist/jquery.min.js'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\lib\jquery\dist\jquery.min.js'
+2021-11-02 19:51:09.345 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/js/bootstrap.bundle.min.js - - - 200 78641 application/javascript 98.3944ms
+2021-11-02 19:51:09.345 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/lib/jquery/dist/jquery.min.js - - - 200 89476 application/javascript 98.8554ms
+2021-11-02 19:51:09.345 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/css/bootstrap.min.css - - - 200 155764 text/css 110.4385ms
+2021-11-02 19:51:10.297 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/ - -
+2021-11-02 19:51:10.313 +01:00 [INF] Authorization was successful.
+2021-11-02 19:51:10.313 +01:00 [INF] Executing endpoint 'ProgLibrary.UI.Controllers.HomeController.Index (ProgLibrary.UI)'
+2021-11-02 19:51:10.313 +01:00 [INF] Route matched with {action = "Index", controller = "Home", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller ProgLibrary.UI.Controllers.HomeController (ProgLibrary.UI).
+2021-11-02 19:51:10.314 +01:00 [INF] Executing ViewResult, running view Index.
+2021-11-02 19:51:10.316 +01:00 [INF] Executed ViewResult - view Index executed in 2.2131ms.
+2021-11-02 19:51:10.317 +01:00 [INF] Executed action ProgLibrary.UI.Controllers.HomeController.Index (ProgLibrary.UI) in 3.1676ms
+2021-11-02 19:51:10.317 +01:00 [INF] Executed endpoint 'ProgLibrary.UI.Controllers.HomeController.Index (ProgLibrary.UI)'
+2021-11-02 19:51:10.319 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/ - - - 200 - text/html;+charset=utf-8 22.4776ms
+2021-11-02 19:51:10.394 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/lib/jquery/dist/jquery.min.js - -
+2021-11-02 19:51:10.394 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/css/bootstrap.min.css - -
+2021-11-02 19:51:10.397 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/css/site.css - -
+2021-11-02 19:51:10.398 +01:00 [INF] Sending file. Request path: '/css/site.css'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\css\site.css'
+2021-11-02 19:51:10.399 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/css/site.css - - - 200 1417 text/css 2.0971ms
+2021-11-02 19:51:10.406 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - -
+2021-11-02 19:51:10.408 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/js/bootstrap.bundle.min.js - -
+2021-11-02 19:51:10.432 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css'
+2021-11-02 19:51:10.433 +01:00 [INF] Sending file. Request path: '/js/site.js'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\js\site.js'
+2021-11-02 19:51:10.436 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - - - 200 230 application/javascript 30.6993ms
+2021-11-02 19:51:10.440 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js'
+2021-11-02 19:51:10.441 +01:00 [INF] Sending file. Request path: '/lib/jquery/dist/jquery.min.js'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\lib\jquery\dist\jquery.min.js'
+2021-11-02 19:51:10.445 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/css/bootstrap.min.css - - - 200 155764 text/css 50.4423ms
+2021-11-02 19:51:10.445 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/js/bootstrap.bundle.min.js - - - 200 78641 application/javascript 37.1032ms
+2021-11-02 19:51:10.482 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/lib/jquery/dist/jquery.min.js - - - 200 89476 application/javascript 88.0072ms
+2021-11-02 19:51:10.995 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/Reservations - -
+2021-11-02 19:51:10.998 +01:00 [INF] Authorization was successful.
+2021-11-02 19:51:10.998 +01:00 [INF] Executing endpoint 'ProgLibrary.UI.Controllers.ReservationsController.Index (ProgLibrary.UI)'
+2021-11-02 19:51:11.006 +01:00 [INF] Route matched with {action = "Index", controller = "Reservations", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller ProgLibrary.UI.Controllers.ReservationsController (ProgLibrary.UI).
+2021-11-02 19:51:11.008 +01:00 [INF] Client: Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJQcm9nTGlicmFyeXw1OGNmNGU5OS1jNmM4LTRkMmYtODM3Ny05ZjM5NjZkYWUxODEiLCJuYW1lIjoibWFjaWVqZG9yeW5lazk1QGdtYWlsLmNvbSIsInVuaXF1ZV9uYW1lIjoiNThjZjRlOTktYzZjOC00ZDJmLTgzNzctOWYzOTY2ZGFlMTgxIiwianRpIjoiMzQyZWVhYmUtZDQ0OC00ZDdmLTliMmEtMzdkY2YzYTc0MzY4IiwiaWF0IjoiMTYzNTg4MjQ3MjMzNSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiNThjZjRlOTktYzZjOC00ZDJmLTgzNzctOWYzOTY2ZGFlMTgxIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZSI6Im1hY2llamRvcnluZWs5NUBnbWFpbC5jb20iLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJtYWNpZWpkb3J5bmVrOTVAZ21haWwuY29tIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjpbInVzZXIiLCJhZG1pbiJdLCJuYmYiOjE2MzU4Nzg4NzIsImV4cCI6MTYzNTg4MjQ3MiwiaXNzIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NDQzMzYiLCJhdWQiOiJodHRwczovL2xvY2FsaG9zdDo0NDMzNiJ9.jVreAWySNGS3G4FmadIR2syBVskq5FvUIAqZjJTQI2I
+
+2021-11-02 19:51:11.008 +01:00 [INF] Start processing HTTP request GET "https://localhost:44336/api/Reservations/GetReservations"
+2021-11-02 19:51:11.009 +01:00 [INF] Sending HTTP request GET "https://localhost:44336/api/Reservations/GetReservations"
+2021-11-02 19:51:11.078 +01:00 [INF] Received HTTP response headers after 69.6412ms - 200
+2021-11-02 19:51:11.079 +01:00 [INF] End processing HTTP request after 70.143ms - 200
+2021-11-02 19:51:11.094 +01:00 [INF] Executing ViewResult, running view Index.
+2021-11-02 19:51:11.128 +01:00 [INF] Executed ViewResult - view Index executed in 33.978ms.
+2021-11-02 19:51:11.128 +01:00 [INF] Executed action ProgLibrary.UI.Controllers.ReservationsController.Index (ProgLibrary.UI) in 121.837ms
+2021-11-02 19:51:11.128 +01:00 [INF] Executed endpoint 'ProgLibrary.UI.Controllers.ReservationsController.Index (ProgLibrary.UI)'
+2021-11-02 19:51:11.129 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/Reservations - - - 200 - text/html;+charset=utf-8 133.2328ms
+2021-11-02 19:51:11.216 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/css/site.css - -
+2021-11-02 19:51:11.216 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/lib/jquery/dist/jquery.min.js - -
+2021-11-02 19:51:11.218 +01:00 [INF] Sending file. Request path: '/css/site.css'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\css\site.css'
+2021-11-02 19:51:11.221 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/css/site.css - - - 200 1417 text/css 5.6050ms
+2021-11-02 19:51:11.221 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/css/bootstrap.min.css - -
+2021-11-02 19:51:11.232 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css'
+2021-11-02 19:51:11.232 +01:00 [INF] Sending file. Request path: '/lib/jquery/dist/jquery.min.js'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\lib\jquery\dist\jquery.min.js'
+2021-11-02 19:51:11.238 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/js/bootstrap.bundle.min.js - -
+2021-11-02 19:51:11.239 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - -
+2021-11-02 19:51:11.265 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js'
+2021-11-02 19:51:11.266 +01:00 [INF] Sending file. Request path: '/js/site.js'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\js\site.js'
+2021-11-02 19:51:11.272 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - - - 200 230 application/javascript 33.1649ms
+2021-11-02 19:51:11.279 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/lib/jquery/dist/jquery.min.js - - - 200 89476 application/javascript 63.6677ms
+2021-11-02 19:51:11.280 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/css/bootstrap.min.css - - - 200 155764 text/css 58.4747ms
+2021-11-02 19:51:11.290 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/js/bootstrap.bundle.min.js - - - 200 78641 application/javascript 51.6744ms
+2021-11-02 19:51:12.239 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/ - -
+2021-11-02 19:51:12.241 +01:00 [INF] Authorization was successful.
+2021-11-02 19:51:12.241 +01:00 [INF] Executing endpoint 'ProgLibrary.UI.Controllers.HomeController.Index (ProgLibrary.UI)'
+2021-11-02 19:51:12.241 +01:00 [INF] Route matched with {action = "Index", controller = "Home", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller ProgLibrary.UI.Controllers.HomeController (ProgLibrary.UI).
+2021-11-02 19:51:12.242 +01:00 [INF] Executing ViewResult, running view Index.
+2021-11-02 19:51:12.244 +01:00 [INF] Executed ViewResult - view Index executed in 1.8884ms.
+2021-11-02 19:51:12.244 +01:00 [INF] Executed action ProgLibrary.UI.Controllers.HomeController.Index (ProgLibrary.UI) in 2.5225ms
+2021-11-02 19:51:12.244 +01:00 [INF] Executed endpoint 'ProgLibrary.UI.Controllers.HomeController.Index (ProgLibrary.UI)'
+2021-11-02 19:51:12.245 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/ - - - 200 - text/html;+charset=utf-8 6.8077ms
+2021-11-02 19:51:12.328 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/css/bootstrap.min.css - -
+2021-11-02 19:51:12.331 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/css/site.css - -
+2021-11-02 19:51:12.332 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/js/bootstrap.bundle.min.js - -
+2021-11-02 19:51:12.339 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - -
+2021-11-02 19:51:12.340 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css'
+2021-11-02 19:51:12.347 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/lib/jquery/dist/jquery.min.js - -
+2021-11-02 19:51:12.348 +01:00 [INF] Sending file. Request path: '/js/site.js'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\js\site.js'
+2021-11-02 19:51:12.347 +01:00 [INF] Sending file. Request path: '/css/site.css'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\css\site.css'
+2021-11-02 19:51:12.351 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - - - 200 230 application/javascript 10.6004ms
+2021-11-02 19:51:12.349 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/css/bootstrap.min.css - - - 200 155764 text/css 20.8803ms
+2021-11-02 19:51:12.356 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/css/site.css - - - 200 1417 text/css 24.6802ms
+2021-11-02 19:51:12.357 +01:00 [INF] Sending file. Request path: '/lib/jquery/dist/jquery.min.js'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\lib\jquery\dist\jquery.min.js'
+2021-11-02 19:51:12.358 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js'
+2021-11-02 19:51:12.361 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/js/bootstrap.bundle.min.js - - - 200 78641 application/javascript 28.7770ms
+2021-11-02 19:51:12.361 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/lib/jquery/dist/jquery.min.js - - - 200 89476 application/javascript 14.6615ms
+2021-11-02 19:51:13.230 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/Account - -
+2021-11-02 19:51:13.231 +01:00 [INF] Authorization was successful.
+2021-11-02 19:51:13.231 +01:00 [INF] Executing endpoint 'ProgLibrary.UI.Controllers.AccountController.Index (ProgLibrary.UI)'
+2021-11-02 19:51:13.243 +01:00 [INF] Route matched with {action = "Index", controller = "Account", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller ProgLibrary.UI.Controllers.AccountController (ProgLibrary.UI).
+2021-11-02 19:51:13.245 +01:00 [INF] Client: Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJQcm9nTGlicmFyeXw1OGNmNGU5OS1jNmM4LTRkMmYtODM3Ny05ZjM5NjZkYWUxODEiLCJuYW1lIjoibWFjaWVqZG9yeW5lazk1QGdtYWlsLmNvbSIsInVuaXF1ZV9uYW1lIjoiNThjZjRlOTktYzZjOC00ZDJmLTgzNzctOWYzOTY2ZGFlMTgxIiwianRpIjoiMzQyZWVhYmUtZDQ0OC00ZDdmLTliMmEtMzdkY2YzYTc0MzY4IiwiaWF0IjoiMTYzNTg4MjQ3MjMzNSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiNThjZjRlOTktYzZjOC00ZDJmLTgzNzctOWYzOTY2ZGFlMTgxIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZSI6Im1hY2llamRvcnluZWs5NUBnbWFpbC5jb20iLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJtYWNpZWpkb3J5bmVrOTVAZ21haWwuY29tIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjpbInVzZXIiLCJhZG1pbiJdLCJuYmYiOjE2MzU4Nzg4NzIsImV4cCI6MTYzNTg4MjQ3MiwiaXNzIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NDQzMzYiLCJhdWQiOiJodHRwczovL2xvY2FsaG9zdDo0NDMzNiJ9.jVreAWySNGS3G4FmadIR2syBVskq5FvUIAqZjJTQI2I
+
+2021-11-02 19:51:13.245 +01:00 [INF] Start processing HTTP request GET "https://localhost:44336/api/Account/Browse"
+2021-11-02 19:51:13.245 +01:00 [INF] Sending HTTP request GET "https://localhost:44336/api/Account/Browse"
+2021-11-02 19:51:16.228 +01:00 [INF] Received HTTP response headers after 2983.215ms - 200
+2021-11-02 19:51:16.229 +01:00 [INF] End processing HTTP request after 2983.6011ms - 200
+2021-11-02 19:51:16.238 +01:00 [INF] Executing ViewResult, running view Index.
+2021-11-02 19:51:16.256 +01:00 [INF] Executed ViewResult - view Index executed in 18.3829ms.
+2021-11-02 19:51:16.256 +01:00 [INF] Executed action ProgLibrary.UI.Controllers.AccountController.Index (ProgLibrary.UI) in 3013.0846ms
+2021-11-02 19:51:16.256 +01:00 [INF] Executed endpoint 'ProgLibrary.UI.Controllers.AccountController.Index (ProgLibrary.UI)'
+2021-11-02 19:51:16.257 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/Account - - - 200 - text/html;+charset=utf-8 3026.4572ms
+2021-11-02 19:51:16.305 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/css/bootstrap.min.css - -
+2021-11-02 19:51:16.309 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/css/site.css - -
+2021-11-02 19:51:16.310 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css'
+2021-11-02 19:51:16.311 +01:00 [INF] Sending file. Request path: '/css/site.css'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\css\site.css'
+2021-11-02 19:51:16.312 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/css/site.css - - - 200 1417 text/css 2.3035ms
+2021-11-02 19:51:16.316 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/css/bootstrap.min.css - - - 200 155764 text/css 10.4708ms
+2021-11-02 19:51:16.337 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/lib/jquery/dist/jquery.min.js - -
+2021-11-02 19:51:16.343 +01:00 [INF] Sending file. Request path: '/lib/jquery/dist/jquery.min.js'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\lib\jquery\dist\jquery.min.js'
+2021-11-02 19:51:16.348 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/lib/jquery/dist/jquery.min.js - - - 200 89476 application/javascript 11.3615ms
+2021-11-02 19:51:16.358 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/js/bootstrap.bundle.min.js - -
+2021-11-02 19:51:16.361 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js'
+2021-11-02 19:51:16.363 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/js/bootstrap.bundle.min.js - - - 200 78641 application/javascript 5.6955ms
+2021-11-02 19:51:16.404 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - -
+2021-11-02 19:51:16.405 +01:00 [INF] Sending file. Request path: '/js/site.js'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\js\site.js'
+2021-11-02 19:51:16.408 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - - - 200 230 application/javascript 4.3514ms
+2021-11-02 19:51:19.416 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/ - -
+2021-11-02 19:51:19.420 +01:00 [INF] Authorization was successful.
+2021-11-02 19:51:19.420 +01:00 [INF] Executing endpoint 'ProgLibrary.UI.Controllers.HomeController.Index (ProgLibrary.UI)'
+2021-11-02 19:51:19.421 +01:00 [INF] Route matched with {action = "Index", controller = "Home", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller ProgLibrary.UI.Controllers.HomeController (ProgLibrary.UI).
+2021-11-02 19:51:19.421 +01:00 [INF] Executing ViewResult, running view Index.
+2021-11-02 19:51:19.423 +01:00 [INF] Executed ViewResult - view Index executed in 1.85ms.
+2021-11-02 19:51:19.423 +01:00 [INF] Executed action ProgLibrary.UI.Controllers.HomeController.Index (ProgLibrary.UI) in 2.1371ms
+2021-11-02 19:51:19.423 +01:00 [INF] Executed endpoint 'ProgLibrary.UI.Controllers.HomeController.Index (ProgLibrary.UI)'
+2021-11-02 19:51:19.424 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/ - - - 200 - text/html;+charset=utf-8 7.4811ms
+2021-11-02 19:51:19.484 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/css/site.css - -
+2021-11-02 19:51:19.487 +01:00 [INF] Sending file. Request path: '/css/site.css'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\css\site.css'
+2021-11-02 19:51:19.487 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/css/bootstrap.min.css - -
+2021-11-02 19:51:19.487 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/css/site.css - - - 200 1417 text/css 3.6119ms
+2021-11-02 19:51:19.488 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/lib/jquery/dist/jquery.min.js - -
+2021-11-02 19:51:19.488 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/js/bootstrap.bundle.min.js - -
+2021-11-02 19:51:19.490 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - -
+2021-11-02 19:51:19.492 +01:00 [INF] Sending file. Request path: '/js/site.js'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\js\site.js'
+2021-11-02 19:51:19.494 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - - - 200 230 application/javascript 4.2238ms
+2021-11-02 19:51:19.496 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css'
+2021-11-02 19:51:19.505 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js'
+2021-11-02 19:51:19.507 +01:00 [INF] Sending file. Request path: '/lib/jquery/dist/jquery.min.js'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\lib\jquery\dist\jquery.min.js'
+2021-11-02 19:51:19.510 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/js/bootstrap.bundle.min.js - - - 200 78641 application/javascript 22.4798ms
+2021-11-02 19:51:19.510 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/css/bootstrap.min.css - - - 200 155764 text/css 23.2118ms
+2021-11-02 19:51:19.511 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/lib/jquery/dist/jquery.min.js - - - 200 89476 application/javascript 23.2486ms
+2021-11-02 19:51:20.419 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/Reservations - -
+2021-11-02 19:51:20.421 +01:00 [INF] Authorization was successful.
+2021-11-02 19:51:20.421 +01:00 [INF] Executing endpoint 'ProgLibrary.UI.Controllers.ReservationsController.Index (ProgLibrary.UI)'
+2021-11-02 19:51:20.421 +01:00 [INF] Route matched with {action = "Index", controller = "Reservations", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller ProgLibrary.UI.Controllers.ReservationsController (ProgLibrary.UI).
+2021-11-02 19:51:20.422 +01:00 [INF] Client: Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJQcm9nTGlicmFyeXw1OGNmNGU5OS1jNmM4LTRkMmYtODM3Ny05ZjM5NjZkYWUxODEiLCJuYW1lIjoibWFjaWVqZG9yeW5lazk1QGdtYWlsLmNvbSIsInVuaXF1ZV9uYW1lIjoiNThjZjRlOTktYzZjOC00ZDJmLTgzNzctOWYzOTY2ZGFlMTgxIiwianRpIjoiMzQyZWVhYmUtZDQ0OC00ZDdmLTliMmEtMzdkY2YzYTc0MzY4IiwiaWF0IjoiMTYzNTg4MjQ3MjMzNSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiNThjZjRlOTktYzZjOC00ZDJmLTgzNzctOWYzOTY2ZGFlMTgxIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZSI6Im1hY2llamRvcnluZWs5NUBnbWFpbC5jb20iLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJtYWNpZWpkb3J5bmVrOTVAZ21haWwuY29tIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjpbInVzZXIiLCJhZG1pbiJdLCJuYmYiOjE2MzU4Nzg4NzIsImV4cCI6MTYzNTg4MjQ3MiwiaXNzIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NDQzMzYiLCJhdWQiOiJodHRwczovL2xvY2FsaG9zdDo0NDMzNiJ9.jVreAWySNGS3G4FmadIR2syBVskq5FvUIAqZjJTQI2I
+
+2021-11-02 19:51:20.422 +01:00 [INF] Start processing HTTP request GET "https://localhost:44336/api/Reservations/GetReservations"
+2021-11-02 19:51:20.422 +01:00 [INF] Sending HTTP request GET "https://localhost:44336/api/Reservations/GetReservations"
+2021-11-02 19:51:20.441 +01:00 [INF] Received HTTP response headers after 18.6543ms - 200
+2021-11-02 19:51:20.441 +01:00 [INF] End processing HTTP request after 19.0131ms - 200
+2021-11-02 19:51:20.444 +01:00 [INF] Executing ViewResult, running view Index.
+2021-11-02 19:51:20.454 +01:00 [INF] Executed ViewResult - view Index executed in 10.7895ms.
+2021-11-02 19:51:20.455 +01:00 [INF] Executed action ProgLibrary.UI.Controllers.ReservationsController.Index (ProgLibrary.UI) in 33.2998ms
+2021-11-02 19:51:20.455 +01:00 [INF] Executed endpoint 'ProgLibrary.UI.Controllers.ReservationsController.Index (ProgLibrary.UI)'
+2021-11-02 19:51:20.455 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/Reservations - - - 200 - text/html;+charset=utf-8 35.7448ms
+2021-11-02 19:51:20.538 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/css/site.css - -
+2021-11-02 19:51:20.538 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/css/bootstrap.min.css - -
+2021-11-02 19:51:20.542 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/lib/jquery/dist/jquery.min.js - -
+2021-11-02 19:51:20.542 +01:00 [INF] Sending file. Request path: '/css/site.css'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\css\site.css'
+2021-11-02 19:51:20.553 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - -
+2021-11-02 19:51:20.554 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/css/site.css - - - 200 1417 text/css 14.3312ms
+2021-11-02 19:51:20.556 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/js/bootstrap.bundle.min.js - -
+2021-11-02 19:51:20.565 +01:00 [INF] Sending file. Request path: '/js/site.js'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\js\site.js'
+2021-11-02 19:51:20.569 +01:00 [INF] Sending file. Request path: '/lib/jquery/dist/jquery.min.js'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\lib\jquery\dist\jquery.min.js'
+2021-11-02 19:51:20.569 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js'
+2021-11-02 19:51:20.570 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css'
+2021-11-02 19:51:20.571 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - - - 200 230 application/javascript 15.9979ms
+2021-11-02 19:51:20.589 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/css/bootstrap.min.css - - - 200 155764 text/css 50.7915ms
+2021-11-02 19:51:20.591 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/lib/jquery/dist/jquery.min.js - - - 200 89476 application/javascript 47.2928ms
+2021-11-02 19:51:20.591 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/js/bootstrap.bundle.min.js - - - 200 78641 application/javascript 34.1642ms
+2021-11-02 19:51:21.380 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/ - -
+2021-11-02 19:51:21.384 +01:00 [INF] Authorization was successful.
+2021-11-02 19:51:21.384 +01:00 [INF] Executing endpoint 'ProgLibrary.UI.Controllers.HomeController.Index (ProgLibrary.UI)'
+2021-11-02 19:51:21.384 +01:00 [INF] Route matched with {action = "Index", controller = "Home", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller ProgLibrary.UI.Controllers.HomeController (ProgLibrary.UI).
+2021-11-02 19:51:21.384 +01:00 [INF] Executing ViewResult, running view Index.
+2021-11-02 19:51:21.385 +01:00 [INF] Executed ViewResult - view Index executed in 1.1784ms.
+2021-11-02 19:51:21.385 +01:00 [INF] Executed action ProgLibrary.UI.Controllers.HomeController.Index (ProgLibrary.UI) in 1.4598ms
+2021-11-02 19:51:21.386 +01:00 [INF] Executed endpoint 'ProgLibrary.UI.Controllers.HomeController.Index (ProgLibrary.UI)'
+2021-11-02 19:51:21.388 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/ - - - 200 - text/html;+charset=utf-8 7.1268ms
+2021-11-02 19:51:21.471 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/css/site.css - -
+2021-11-02 19:51:21.471 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/lib/jquery/dist/jquery.min.js - -
+2021-11-02 19:51:21.476 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/css/bootstrap.min.css - -
+2021-11-02 19:51:21.477 +01:00 [INF] Sending file. Request path: '/css/site.css'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\css\site.css'
+2021-11-02 19:51:21.481 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/css/site.css - - - 200 1417 text/css 10.3316ms
+2021-11-02 19:51:21.486 +01:00 [INF] Sending file. Request path: '/lib/jquery/dist/jquery.min.js'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\lib\jquery\dist\jquery.min.js'
+2021-11-02 19:51:21.487 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css'
+2021-11-02 19:51:21.490 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - -
+2021-11-02 19:51:21.492 +01:00 [INF] Sending file. Request path: '/js/site.js'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\js\site.js'
+2021-11-02 19:51:21.492 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/js/bootstrap.bundle.min.js - -
+2021-11-02 19:51:21.494 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - - - 200 230 application/javascript 3.6413ms
+2021-11-02 19:51:21.521 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/lib/jquery/dist/jquery.min.js - - - 200 89476 application/javascript 50.1412ms
+2021-11-02 19:51:21.521 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/css/bootstrap.min.css - - - 200 155764 text/css 45.3013ms
+2021-11-02 19:51:21.524 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js'
+2021-11-02 19:51:21.537 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/js/bootstrap.bundle.min.js - - - 200 78641 application/javascript 45.0225ms
+2021-11-02 19:51:22.477 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/Books - -
+2021-11-02 19:51:22.486 +01:00 [INF] Authorization was successful.
+2021-11-02 19:51:22.486 +01:00 [INF] Executing endpoint 'ProgLibrary.UI.Controllers.BooksController.Index (ProgLibrary.UI)'
+2021-11-02 19:51:22.486 +01:00 [INF] Route matched with {action = "Index", controller = "Books", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller ProgLibrary.UI.Controllers.BooksController (ProgLibrary.UI).
+2021-11-02 19:51:22.487 +01:00 [INF] Client: Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJQcm9nTGlicmFyeXw1OGNmNGU5OS1jNmM4LTRkMmYtODM3Ny05ZjM5NjZkYWUxODEiLCJuYW1lIjoibWFjaWVqZG9yeW5lazk1QGdtYWlsLmNvbSIsInVuaXF1ZV9uYW1lIjoiNThjZjRlOTktYzZjOC00ZDJmLTgzNzctOWYzOTY2ZGFlMTgxIiwianRpIjoiMzQyZWVhYmUtZDQ0OC00ZDdmLTliMmEtMzdkY2YzYTc0MzY4IiwiaWF0IjoiMTYzNTg4MjQ3MjMzNSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiNThjZjRlOTktYzZjOC00ZDJmLTgzNzctOWYzOTY2ZGFlMTgxIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZSI6Im1hY2llamRvcnluZWs5NUBnbWFpbC5jb20iLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJtYWNpZWpkb3J5bmVrOTVAZ21haWwuY29tIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjpbInVzZXIiLCJhZG1pbiJdLCJuYmYiOjE2MzU4Nzg4NzIsImV4cCI6MTYzNTg4MjQ3MiwiaXNzIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NDQzMzYiLCJhdWQiOiJodHRwczovL2xvY2FsaG9zdDo0NDMzNiJ9.jVreAWySNGS3G4FmadIR2syBVskq5FvUIAqZjJTQI2I
+
+2021-11-02 19:51:22.487 +01:00 [INF] Start processing HTTP request GET "https://localhost:44336/api/Books/Get"
+2021-11-02 19:51:22.487 +01:00 [INF] Sending HTTP request GET "https://localhost:44336/api/Books/Get"
+2021-11-02 19:51:22.525 +01:00 [INF] Received HTTP response headers after 38.2773ms - 200
+2021-11-02 19:51:22.526 +01:00 [INF] End processing HTTP request after 38.6481ms - 200
+2021-11-02 19:51:22.526 +01:00 [INF] Executing ViewResult, running view Index.
+2021-11-02 19:51:22.602 +01:00 [INF] Executed ViewResult - view Index executed in 75.913ms.
+2021-11-02 19:51:22.603 +01:00 [INF] Executed action ProgLibrary.UI.Controllers.BooksController.Index (ProgLibrary.UI) in 115.9814ms
+2021-11-02 19:51:22.603 +01:00 [INF] Executed endpoint 'ProgLibrary.UI.Controllers.BooksController.Index (ProgLibrary.UI)'
+2021-11-02 19:51:22.604 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/Books - - - 200 - text/html;+charset=utf-8 126.9480ms
+2021-11-02 19:51:22.689 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/css/bootstrap.min.css - -
+2021-11-02 19:51:22.698 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/css/site.css - -
+2021-11-02 19:51:22.700 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css'
+2021-11-02 19:51:22.701 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/lib/jquery/dist/jquery.min.js - -
+2021-11-02 19:51:22.701 +01:00 [INF] Sending file. Request path: '/css/site.css'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\css\site.css'
+2021-11-02 19:51:22.703 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/css/site.css - - - 200 1417 text/css 6.2968ms
+2021-11-02 19:51:22.704 +01:00 [INF] Sending file. Request path: '/lib/jquery/dist/jquery.min.js'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\lib\jquery\dist\jquery.min.js'
+2021-11-02 19:51:22.704 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - -
+2021-11-02 19:51:22.705 +01:00 [INF] Sending file. Request path: '/js/site.js'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\js\site.js'
+2021-11-02 19:51:22.706 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/js/bootstrap.bundle.min.js - -
+2021-11-02 19:51:22.710 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - - - 200 230 application/javascript 5.2948ms
+2021-11-02 19:51:22.742 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js'
+2021-11-02 19:51:22.744 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/lib/jquery/dist/jquery.min.js - - - 200 89476 application/javascript 43.1835ms
+2021-11-02 19:51:22.751 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/css/bootstrap.min.css - - - 200 155764 text/css 61.8902ms
+2021-11-02 19:51:22.751 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/js/bootstrap.bundle.min.js - - - 200 78641 application/javascript 45.5659ms
+2021-11-02 19:51:23.506 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/ - -
+2021-11-02 19:51:23.507 +01:00 [INF] Authorization was successful.
+2021-11-02 19:51:23.507 +01:00 [INF] Executing endpoint 'ProgLibrary.UI.Controllers.HomeController.Index (ProgLibrary.UI)'
+2021-11-02 19:51:23.507 +01:00 [INF] Route matched with {action = "Index", controller = "Home", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller ProgLibrary.UI.Controllers.HomeController (ProgLibrary.UI).
+2021-11-02 19:51:23.508 +01:00 [INF] Executing ViewResult, running view Index.
+2021-11-02 19:51:23.509 +01:00 [INF] Executed ViewResult - view Index executed in 1.4121ms.
+2021-11-02 19:51:23.509 +01:00 [INF] Executed action ProgLibrary.UI.Controllers.HomeController.Index (ProgLibrary.UI) in 1.7057ms
+2021-11-02 19:51:23.509 +01:00 [INF] Executed endpoint 'ProgLibrary.UI.Controllers.HomeController.Index (ProgLibrary.UI)'
+2021-11-02 19:51:23.515 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/ - - - 200 - text/html;+charset=utf-8 9.1590ms
+2021-11-02 19:51:23.585 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/css/site.css - -
+2021-11-02 19:51:23.585 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/lib/jquery/dist/jquery.min.js - -
+2021-11-02 19:51:23.585 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/js/bootstrap.bundle.min.js - -
+2021-11-02 19:51:23.588 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/css/bootstrap.min.css - -
+2021-11-02 19:51:23.592 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js'
+2021-11-02 19:51:23.593 +01:00 [INF] Sending file. Request path: '/lib/jquery/dist/jquery.min.js'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\lib\jquery\dist\jquery.min.js'
+2021-11-02 19:51:23.605 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css'
+2021-11-02 19:51:23.606 +01:00 [INF] Sending file. Request path: '/css/site.css'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\css\site.css'
+2021-11-02 19:51:23.607 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/css/site.css - - - 200 1417 text/css 21.6189ms
+2021-11-02 19:51:23.609 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - -
+2021-11-02 19:51:23.616 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/js/bootstrap.bundle.min.js - - - 200 78641 application/javascript 30.1909ms
+2021-11-02 19:51:23.626 +01:00 [INF] Sending file. Request path: '/js/site.js'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\js\site.js'
+2021-11-02 19:51:23.626 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/lib/jquery/dist/jquery.min.js - - - 200 89476 application/javascript 40.5018ms
+2021-11-02 19:51:23.627 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - - - 200 230 application/javascript 18.1287ms
+2021-11-02 19:51:23.630 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/css/bootstrap.min.css - - - 200 155764 text/css 41.6833ms
+2021-11-02 19:51:26.179 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - -
+2021-11-02 19:51:26.188 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map'
+2021-11-02 19:51:26.193 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/css/bootstrap.min.css.map - -
+2021-11-02 19:51:26.202 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - - - 200 311949 text/plain 23.8243ms
+2021-11-02 19:51:26.217 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.min.css.map'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css.map'
+2021-11-02 19:51:26.233 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/css/bootstrap.min.css.map - - - 200 625953 text/plain 42.9667ms
+2021-11-02 19:51:28.416 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/Books - -
+2021-11-02 19:51:28.417 +01:00 [INF] Authorization was successful.
+2021-11-02 19:51:28.417 +01:00 [INF] Executing endpoint 'ProgLibrary.UI.Controllers.BooksController.Index (ProgLibrary.UI)'
+2021-11-02 19:51:28.418 +01:00 [INF] Route matched with {action = "Index", controller = "Books", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller ProgLibrary.UI.Controllers.BooksController (ProgLibrary.UI).
+2021-11-02 19:51:28.418 +01:00 [INF] Client: Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJQcm9nTGlicmFyeXw1OGNmNGU5OS1jNmM4LTRkMmYtODM3Ny05ZjM5NjZkYWUxODEiLCJuYW1lIjoibWFjaWVqZG9yeW5lazk1QGdtYWlsLmNvbSIsInVuaXF1ZV9uYW1lIjoiNThjZjRlOTktYzZjOC00ZDJmLTgzNzctOWYzOTY2ZGFlMTgxIiwianRpIjoiMzQyZWVhYmUtZDQ0OC00ZDdmLTliMmEtMzdkY2YzYTc0MzY4IiwiaWF0IjoiMTYzNTg4MjQ3MjMzNSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiNThjZjRlOTktYzZjOC00ZDJmLTgzNzctOWYzOTY2ZGFlMTgxIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZSI6Im1hY2llamRvcnluZWs5NUBnbWFpbC5jb20iLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJtYWNpZWpkb3J5bmVrOTVAZ21haWwuY29tIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjpbInVzZXIiLCJhZG1pbiJdLCJuYmYiOjE2MzU4Nzg4NzIsImV4cCI6MTYzNTg4MjQ3MiwiaXNzIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NDQzMzYiLCJhdWQiOiJodHRwczovL2xvY2FsaG9zdDo0NDMzNiJ9.jVreAWySNGS3G4FmadIR2syBVskq5FvUIAqZjJTQI2I
+
+2021-11-02 19:51:28.418 +01:00 [INF] Start processing HTTP request GET "https://localhost:44336/api/Books/Get"
+2021-11-02 19:51:28.418 +01:00 [INF] Sending HTTP request GET "https://localhost:44336/api/Books/Get"
+2021-11-02 19:51:28.483 +01:00 [INF] Received HTTP response headers after 64.3555ms - 200
+2021-11-02 19:51:28.483 +01:00 [INF] End processing HTTP request after 64.7632ms - 200
+2021-11-02 19:51:28.485 +01:00 [INF] Executing ViewResult, running view Index.
+2021-11-02 19:51:28.567 +01:00 [INF] Executed ViewResult - view Index executed in 82.4907ms.
+2021-11-02 19:51:28.568 +01:00 [INF] Executed action ProgLibrary.UI.Controllers.BooksController.Index (ProgLibrary.UI) in 150.04ms
+2021-11-02 19:51:28.568 +01:00 [INF] Executed endpoint 'ProgLibrary.UI.Controllers.BooksController.Index (ProgLibrary.UI)'
+2021-11-02 19:51:28.569 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/Books - - - 200 - text/html;+charset=utf-8 152.9316ms
+2021-11-02 19:51:28.647 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/css/bootstrap.min.css - -
+2021-11-02 19:51:28.647 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/css/site.css - -
+2021-11-02 19:51:28.650 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/js/bootstrap.bundle.min.js - -
+2021-11-02 19:51:28.650 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/lib/jquery/dist/jquery.min.js - -
+2021-11-02 19:51:28.660 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js'
+2021-11-02 19:51:28.663 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css'
+2021-11-02 19:51:28.665 +01:00 [INF] Sending file. Request path: '/css/site.css'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\css\site.css'
+2021-11-02 19:51:28.667 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/css/site.css - - - 200 1417 text/css 19.6537ms
+2021-11-02 19:51:28.672 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/js/bootstrap.bundle.min.js - - - 200 78641 application/javascript 21.8305ms
+2021-11-02 19:51:28.672 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - -
+2021-11-02 19:51:28.683 +01:00 [INF] Sending file. Request path: '/js/site.js'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\js\site.js'
+2021-11-02 19:51:28.697 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - - - 200 230 application/javascript 24.4767ms
+2021-11-02 19:51:28.673 +01:00 [INF] Sending file. Request path: '/lib/jquery/dist/jquery.min.js'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\lib\jquery\dist\jquery.min.js'
+2021-11-02 19:51:28.697 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/css/bootstrap.min.css - - - 200 155764 text/css 50.3313ms
+2021-11-02 19:51:28.711 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/lib/jquery/dist/jquery.min.js - - - 200 89476 application/javascript 60.9712ms
+2021-11-02 19:51:28.861 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/css/bootstrap.min.css.map - -
+2021-11-02 19:51:28.918 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.min.css.map'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css.map'
+2021-11-02 19:51:28.952 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/css/bootstrap.min.css.map - - - 200 625953 text/plain 91.0137ms
+2021-11-02 19:51:29.151 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - -
+2021-11-02 19:51:29.157 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map'
+2021-11-02 19:51:29.179 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map - - - 200 311949 text/plain 28.6747ms
