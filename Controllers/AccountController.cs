@@ -24,27 +24,55 @@ namespace ProgLibrary.UI.Controllers
         public AccountController(IBrokerService brokerService, IMapper mapper)
         {
             _brokerService = brokerService;
-      
+
             _mapper = mapper;
         }
-       
+
         [HttpGet]
+        [Route("[Action]")]
         public async Task<IActionResult> Index()
         {
             var client = await _brokerService.Create(HttpContext);
             var response = await client.GetFromJsonAsync<IEnumerable<AccountDto>>("Account/Browse");
-            return View(_mapper.Map<IEnumerable<AccountViewModel>> (response));
-        
+            return View(_mapper.Map<IEnumerable<AccountViewModel>>(response));
+
         }
 
-        // GET: LoginController/Details/Guid
+        [HttpGet]
+        [Route("[Action]")]
+        public async Task<IActionResult> Delete(Guid? userId)
+        {
+            var client = await _brokerService.Create(HttpContext);
+            var response = await client.GetFromJsonAsync<AccountDto>($"Account/GetById/{userId}");
+            return View(_mapper.Map<AccountViewModel>(response));
+        }
+
+
+        [HttpPost, ActionName("Delete")]
+        [Route("[Action]")]
+        public async Task<IActionResult> DeleteConfirmed(Guid userId)
+        {
+            var client = await _brokerService.Create(HttpContext);
+            var response = await client.DeleteAsync($"Account/Delete/{userId}");
+            ViewBag.Result = response.Content.ReadAsStringAsync();
+            if (response.IsSuccessStatusCode)
+            {
+                
+                return RedirectToAction(nameof(Index));
+                
+            }
+            return RedirectToAction(nameof(Delete),userId);
+            
+        }
+
+        // GET: Account/Details/{userId}
         [HttpGet("Details/{userId}")]
+        [Route("[Action]")]
         public async Task<IActionResult> Details(Guid userId)
         {
             var client = await _brokerService.Create(HttpContext);
-            var response = await _brokerService.SendJsonGetAsync(client, "Account/GetById", userId);
-            var user = await response.Content.ReadFromJsonAsync<AccountDto>();
-            return View(_mapper.Map<AccountViewModel>(user));
+            var response = await client.GetFromJsonAsync<AccountDetailsDto>($"Account/GetById/{userId}");
+            return View(_mapper.Map<AccountDetailsViewModel>(response));
         }
 
 

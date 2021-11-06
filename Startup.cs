@@ -34,11 +34,6 @@ namespace ProgLibrary.UI
                 .AddDefaultTokenProviders()      
                 .AddDefaultUI();
 
-                     //.AddRoles<Role>()
-
-
-
-
             services.Configure<JwtSettings>(Configuration.GetSection("JWT")); // Bindowanie z sekcji konfiguracji JwtConfig - appsetings.json"         
             services.AddSingleton<IJwtHandler, JwtHandler>(); //JwtBearer Tokens Handler
             services.AddScoped<IBrokerService, BrokerService>();

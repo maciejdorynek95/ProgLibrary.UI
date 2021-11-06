@@ -504,3 +504,12 @@ C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\obj\Debug\net5.0\R
 C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\_StatusMessage.cshtml.g.cs
 C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Error.cshtml.g.cs
 C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\obj\Debug\net5.0\Razor\Views\Books\Edit.cshtml.g.cs
+C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\obj\Debug\net5.0\Razor\Views\Account\Delete.cshtml.g.cs
+C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\obj\Debug\net5.0\Razor\Views\Account\Details.cshtml.g.cs
+C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\bin\Debug\net5.0\System.Web.Mvc.dll
+C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\bin\Debug\net5.0\System.Web.Razor.dll
+C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\bin\Debug\net5.0\System.Web.Helpers.dll
+C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\bin\Debug\net5.0\System.Web.WebPages.Deployment.dll
+C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\bin\Debug\net5.0\System.Web.WebPages.Razor.dll
+C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\bin\Debug\net5.0\System.Web.WebPages.dll
+C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\bin\Debug\net5.0\Microsoft.Web.Infrastructure.dll

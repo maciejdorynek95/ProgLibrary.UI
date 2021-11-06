@@ -1,0 +1,427 @@
+2021-11-05 20:20:02.714 +01:00 [INF] Staring Web App
+2021-11-05 20:20:08.115 +01:00 [INF] User profile is available. Using 'C:\Users\dorynekm\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-11-05 20:20:10.284 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-11-05 20:20:10.285 +01:00 [INF] Hosting environment: Development
+2021-11-05 20:20:10.285 +01:00 [INF] Content root path: C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI
+2021-11-05 20:20:10.864 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/ - -
+2021-11-05 20:20:11.056 +01:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (user)
+2021-11-05 20:20:11.128 +01:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2021-11-05 20:20:11.166 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/ - - - 302 - - 305.0453ms
+2021-11-05 20:20:11.183 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/Identity/Account/Login?ReturnUrl=%2F - -
+2021-11-05 20:20:11.239 +01:00 [INF] Executing endpoint '/Account/Login'
+2021-11-05 20:20:11.398 +01:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2021-11-05 20:20:11.986 +01:00 [INF] Executing handler method ProgLibrary.UI.Areas.Identity.Pages.Account.LoginModel.OnGetAsync - ModelState is "Valid"
+2021-11-05 20:20:12.015 +01:00 [INF] AuthenticationScheme: Identity.External signed out.
+2021-11-05 20:20:12.024 +01:00 [INF] Executed handler method OnGetAsync, returned result .
+2021-11-05 20:20:12.034 +01:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2021-11-05 20:20:12.034 +01:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2021-11-05 20:20:12.478 +01:00 [INF] Executed page /Account/Login in 1071.5707ms
+2021-11-05 20:20:12.479 +01:00 [INF] Executed endpoint '/Account/Login'
+2021-11-05 20:20:12.488 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/Identity/Account/Login?ReturnUrl=%2F - - - 200 - text/html;+charset=utf-8 1304.8872ms
+2021-11-05 20:20:12.597 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/Identity/lib/jquery-validation/dist/jquery.validate.js - -
+2021-11-05 20:20:12.597 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/css/bootstrap.min.css - -
+2021-11-05 20:20:12.597 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/lib/jquery/dist/jquery.min.js - -
+2021-11-05 20:20:12.597 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/Identity/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js - -
+2021-11-05 20:20:12.598 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/css/site.css - -
+2021-11-05 20:20:12.619 +01:00 [INF] Sending file. Request path: '/css/site.css'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\css\site.css'
+2021-11-05 20:20:12.622 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/js/bootstrap.bundle.min.js - -
+2021-11-05 20:20:12.664 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - -
+2021-11-05 20:20:12.667 +01:00 [INF] Sending file. Request path: '/Identity/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js'. Physical path: 'C:\Users\dorynekm\.nuget\packages\microsoft.aspnetcore.identity.ui\5.0.11\staticwebassets\V4\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js'
+2021-11-05 20:20:12.670 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/css/site.css - - - 200 1417 text/css 72.0589ms
+2021-11-05 20:20:12.682 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/Identity/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js - - - 200 19366 application/javascript 84.4459ms
+2021-11-05 20:20:12.684 +01:00 [INF] Sending file. Request path: '/lib/jquery/dist/jquery.min.js'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\lib\jquery\dist\jquery.min.js'
+2021-11-05 20:20:12.688 +01:00 [INF] Sending file. Request path: '/js/site.js'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\js\site.js'
+2021-11-05 20:20:12.694 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - - - 200 230 application/javascript 30.3583ms
+2021-11-05 20:20:12.687 +01:00 [INF] Sending file. Request path: '/Identity/lib/jquery-validation/dist/jquery.validate.js'. Physical path: 'C:\Users\dorynekm\.nuget\packages\microsoft.aspnetcore.identity.ui\5.0.11\staticwebassets\V4\lib\jquery-validation\dist\jquery.validate.js'
+2021-11-05 20:20:12.698 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css'
+2021-11-05 20:20:12.698 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/lib/jquery/dist/jquery.min.js - - - 200 89476 application/javascript 101.4541ms
+2021-11-05 20:20:12.699 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/Identity/lib/jquery-validation/dist/jquery.validate.js - - - 200 48676 application/javascript 101.8082ms
+2021-11-05 20:20:12.704 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js'
+2021-11-05 20:20:12.707 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/css/bootstrap.min.css - - - 200 155764 text/css 109.9793ms
+2021-11-05 20:20:12.707 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/js/bootstrap.bundle.min.js - - - 200 78641 application/javascript 85.6982ms
+2021-11-05 20:21:41.067 +01:00 [INF] Request starting HTTP/2 POST https://localhost:44306/Identity/Account/Login?ReturnUrl=%2F application/x-www-form-urlencoded 277
+2021-11-05 20:21:41.084 +01:00 [INF] Executing endpoint '/Account/Login'
+2021-11-05 20:21:41.085 +01:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2021-11-05 20:21:41.137 +01:00 [INF] Executing handler method ProgLibrary.UI.Areas.Identity.Pages.Account.LoginModel.OnPostAsync - ModelState is "Valid"
+2021-11-05 20:21:42.125 +01:00 [INF] Entity Framework Core 5.0.11 initialized 'AuthenticationDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2021-11-05 20:21:42.760 +01:00 [INF] Executed DbCommand (24ms) [Parameters=[@__normalizedUserName_0='?' (Size = 25)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."AccessFailedCount", "a"."ConcurrencyStamp", "a"."Email", "a"."EmailConfirmed", "a"."LockoutEnabled", "a"."LockoutEnd", "a"."NormalizedEmail", "a"."NormalizedUserName", "a"."PasswordHash", "a"."PhoneNumber", "a"."PhoneNumberConfirmed", "a"."SecurityStamp", "a"."TwoFactorEnabled", "a"."UserName"
+FROM "AspNetUsers" AS "a"
+WHERE "a"."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2021-11-05 20:21:43.029 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__user_Id_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."ClaimType", "a"."ClaimValue", "a"."UserId"
+FROM "AspNetUserClaims" AS "a"
+WHERE "a"."UserId" = @__user_Id_0
+2021-11-05 20:21:43.070 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "a0"."Name"
+FROM "AspNetUserRoles" AS "a"
+INNER JOIN "AspNetRoles" AS "a0" ON "a"."RoleId" = "a0"."Id"
+WHERE "a"."UserId" = @__userId_0
+2021-11-05 20:21:43.083 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."ConcurrencyStamp", "a"."Name", "a"."NormalizedName"
+FROM "AspNetRoles" AS "a"
+WHERE "a"."NormalizedName" = @__normalizedName_0
+LIMIT 1
+2021-11-05 20:21:43.117 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__role_Id_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."ClaimType", "a"."ClaimValue"
+FROM "AspNetRoleClaims" AS "a"
+WHERE "a"."RoleId" = @__role_Id_0
+2021-11-05 20:21:43.129 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedName_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."ConcurrencyStamp", "a"."Name", "a"."NormalizedName"
+FROM "AspNetRoles" AS "a"
+WHERE "a"."NormalizedName" = @__normalizedName_0
+LIMIT 1
+2021-11-05 20:21:43.141 +01:00 [INF] Executed DbCommand (6ms) [Parameters=[@__role_Id_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."ClaimType", "a"."ClaimValue"
+FROM "AspNetRoleClaims" AS "a"
+WHERE "a"."RoleId" = @__role_Id_0
+2021-11-05 20:21:43.152 +01:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2021-11-05 20:21:43.153 +01:00 [INF] Uzytkownik zalogowany
+2021-11-05 20:21:43.198 +01:00 [INF] Client: 
+2021-11-05 20:21:43.222 +01:00 [INF] Start processing HTTP request POST "https://localhost:44336/api/Account/Login"
+2021-11-05 20:21:43.224 +01:00 [INF] Sending HTTP request POST "https://localhost:44336/api/Account/Login"
+2021-11-05 20:21:46.217 +01:00 [INF] Received HTTP response headers after 2989.4026ms - 200
+2021-11-05 20:21:46.218 +01:00 [INF] End processing HTTP request after 3000.2353ms - 200
+2021-11-05 20:21:46.225 +01:00 [INF] Response: {
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJQcm9nTGlicmFyeXw1OGNmNGU5OS1jNmM4LTRkMmYtODM3Ny05ZjM5NjZkYWUxODEiLCJuYW1lIjoibWFjaWVqZG9yeW5lazk1QGdtYWlsLmNvbSIsInVuaXF1ZV9uYW1lIjoiNThjZjRlOTktYzZjOC00ZDJmLTgzNzctOWYzOTY2ZGFlMTgxIiwianRpIjoiOGNmNjk1NDAtZmI5Ny00OTM1LWFjNjItNWEwODVlZDZkOTA4IiwiaWF0IjoiMTYzNjE0MzcwNTk0NyIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiNThjZjRlOTktYzZjOC00ZDJmLTgzNzctOWYzOTY2ZGFlMTgxIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZSI6Im1hY2llamRvcnluZWs5NUBnbWFpbC5jb20iLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJtYWNpZWpkb3J5bmVrOTVAZ21haWwuY29tIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjpbInVzZXIiLCJhZG1pbiJdLCJuYmYiOjE2MzYxNDAxMDUsImV4cCI6MTYzNjE0MzcwNSwiaXNzIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NDQzMzYiLCJhdWQiOiJodHRwczovL2xvY2FsaG9zdDo0NDMzNiJ9.Ui8mo7Hr9AdXHMcoMCCRyS5VDvMaRAqNYCI0CC7r_Yg",
+  "role": "user, admin",
+  "expires": 1636147305947
+}
+2021-11-05 20:21:46.235 +01:00 [INF] Executed handler method OnPostAsync, returned result Microsoft.AspNetCore.Mvc.LocalRedirectResult.
+2021-11-05 20:21:46.239 +01:00 [INF] Executing LocalRedirectResult, redirecting to /.
+2021-11-05 20:21:46.241 +01:00 [INF] Executed page /Account/Login in 5156.0191ms
+2021-11-05 20:21:46.242 +01:00 [INF] Executed endpoint '/Account/Login'
+2021-11-05 20:21:46.246 +01:00 [INF] Session started; Key:4babac9c-28d6-5465-949e-39ef85a1474c, Id:3f15c4b0-d3cd-d53b-26b2-edb2f47db7c5
+2021-11-05 20:21:46.251 +01:00 [INF] Request finished HTTP/2 POST https://localhost:44306/Identity/Account/Login?ReturnUrl=%2F application/x-www-form-urlencoded 277 - 302 - - 5184.5183ms
+2021-11-05 20:21:46.264 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/ - -
+2021-11-05 20:21:46.278 +01:00 [INF] Authorization was successful.
+2021-11-05 20:21:46.279 +01:00 [INF] Executing endpoint 'ProgLibrary.UI.Controllers.HomeController.Index (ProgLibrary.UI)'
+2021-11-05 20:21:46.285 +01:00 [INF] Route matched with {action = "Index", controller = "Home", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller ProgLibrary.UI.Controllers.HomeController (ProgLibrary.UI).
+2021-11-05 20:21:46.293 +01:00 [INF] Executing ViewResult, running view Index.
+2021-11-05 20:21:46.315 +01:00 [INF] Executed ViewResult - view Index executed in 23.2748ms.
+2021-11-05 20:21:46.322 +01:00 [INF] Executed action ProgLibrary.UI.Controllers.HomeController.Index (ProgLibrary.UI) in 35.8406ms
+2021-11-05 20:21:46.322 +01:00 [INF] Executed endpoint 'ProgLibrary.UI.Controllers.HomeController.Index (ProgLibrary.UI)'
+2021-11-05 20:21:46.323 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/ - - - 200 - text/html;+charset=utf-8 58.8297ms
+2021-11-05 20:21:46.392 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/css/site.css - -
+2021-11-05 20:21:46.393 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/css/bootstrap.min.css - -
+2021-11-05 20:21:46.397 +01:00 [INF] Sending file. Request path: '/css/site.css'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\css\site.css'
+2021-11-05 20:21:46.400 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/css/site.css - - - 200 1417 text/css 7.2099ms
+2021-11-05 20:21:46.401 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/js/bootstrap.bundle.min.js - -
+2021-11-05 20:21:46.404 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/lib/jquery/dist/jquery.min.js - -
+2021-11-05 20:21:46.405 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - -
+2021-11-05 20:21:46.426 +01:00 [INF] Sending file. Request path: '/js/site.js'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\js\site.js'
+2021-11-05 20:21:46.426 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - - - 200 230 application/javascript 21.8389ms
+2021-11-05 20:21:46.428 +01:00 [INF] Sending file. Request path: '/lib/jquery/dist/jquery.min.js'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\lib\jquery\dist\jquery.min.js'
+2021-11-05 20:21:46.429 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js'
+2021-11-05 20:21:46.429 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css'
+2021-11-05 20:21:46.432 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/js/bootstrap.bundle.min.js - - - 200 78641 application/javascript 30.9214ms
+2021-11-05 20:21:46.432 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/lib/jquery/dist/jquery.min.js - - - 200 89476 application/javascript 28.7851ms
+2021-11-05 20:21:46.433 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/css/bootstrap.min.css - - - 200 155764 text/css 39.5594ms
+2021-11-05 20:21:57.209 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/Account - -
+2021-11-05 20:21:57.211 +01:00 [INF] Authorization was successful.
+2021-11-05 20:21:57.212 +01:00 [INF] Executing endpoint 'ProgLibrary.UI.Controllers.AccountController.Index (ProgLibrary.UI)'
+2021-11-05 20:21:57.226 +01:00 [INF] Route matched with {action = "Index", controller = "Account", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller ProgLibrary.UI.Controllers.AccountController (ProgLibrary.UI).
+2021-11-05 20:21:57.236 +01:00 [INF] Client: Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJQcm9nTGlicmFyeXw1OGNmNGU5OS1jNmM4LTRkMmYtODM3Ny05ZjM5NjZkYWUxODEiLCJuYW1lIjoibWFjaWVqZG9yeW5lazk1QGdtYWlsLmNvbSIsInVuaXF1ZV9uYW1lIjoiNThjZjRlOTktYzZjOC00ZDJmLTgzNzctOWYzOTY2ZGFlMTgxIiwianRpIjoiOGNmNjk1NDAtZmI5Ny00OTM1LWFjNjItNWEwODVlZDZkOTA4IiwiaWF0IjoiMTYzNjE0MzcwNTk0NyIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiNThjZjRlOTktYzZjOC00ZDJmLTgzNzctOWYzOTY2ZGFlMTgxIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZSI6Im1hY2llamRvcnluZWs5NUBnbWFpbC5jb20iLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJtYWNpZWpkb3J5bmVrOTVAZ21haWwuY29tIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjpbInVzZXIiLCJhZG1pbiJdLCJuYmYiOjE2MzYxNDAxMDUsImV4cCI6MTYzNjE0MzcwNSwiaXNzIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NDQzMzYiLCJhdWQiOiJodHRwczovL2xvY2FsaG9zdDo0NDMzNiJ9.Ui8mo7Hr9AdXHMcoMCCRyS5VDvMaRAqNYCI0CC7r_Yg
+
+2021-11-05 20:21:57.238 +01:00 [INF] Start processing HTTP request GET "https://localhost:44336/api/Account/Browse"
+2021-11-05 20:21:57.238 +01:00 [INF] Sending HTTP request GET "https://localhost:44336/api/Account/Browse"
+2021-11-05 20:21:57.504 +01:00 [INF] Received HTTP response headers after 266.2224ms - 200
+2021-11-05 20:21:57.504 +01:00 [INF] End processing HTTP request after 266.8203ms - 200
+2021-11-05 20:21:57.539 +01:00 [INF] Executing ViewResult, running view Index.
+2021-11-05 20:21:57.563 +01:00 [INF] Executed ViewResult - view Index executed in 25.1449ms.
+2021-11-05 20:21:57.563 +01:00 [INF] Executed action ProgLibrary.UI.Controllers.AccountController.Index (ProgLibrary.UI) in 337.0269ms
+2021-11-05 20:21:57.565 +01:00 [INF] Executed endpoint 'ProgLibrary.UI.Controllers.AccountController.Index (ProgLibrary.UI)'
+2021-11-05 20:21:57.571 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/Account - - - 200 - text/html;+charset=utf-8 362.1910ms
+2021-11-05 20:21:57.630 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/css/bootstrap.min.css - -
+2021-11-05 20:21:57.631 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/css/site.css - -
+2021-11-05 20:21:57.631 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/lib/jquery/dist/jquery.min.js - -
+2021-11-05 20:21:57.633 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/js/bootstrap.bundle.min.js - -
+2021-11-05 20:21:57.633 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - -
+2021-11-05 20:21:57.642 +01:00 [INF] Sending file. Request path: '/js/site.js'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\js\site.js'
+2021-11-05 20:21:57.643 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - - - 200 230 application/javascript 9.3229ms
+2021-11-05 20:21:57.652 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css'
+2021-11-05 20:21:57.653 +01:00 [INF] Sending file. Request path: '/css/site.css'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\css\site.css'
+2021-11-05 20:21:57.654 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/css/site.css - - - 200 1417 text/css 22.6552ms
+2021-11-05 20:21:57.654 +01:00 [INF] Sending file. Request path: '/lib/jquery/dist/jquery.min.js'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\lib\jquery\dist\jquery.min.js'
+2021-11-05 20:21:57.655 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js'
+2021-11-05 20:21:57.657 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/lib/jquery/dist/jquery.min.js - - - 200 89476 application/javascript 26.1313ms
+2021-11-05 20:21:57.657 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/js/bootstrap.bundle.min.js - - - 200 78641 application/javascript 24.9517ms
+2021-11-05 20:21:57.657 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/css/bootstrap.min.css - - - 200 155764 text/css 26.9191ms
+2021-11-05 20:22:00.261 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/Account/Delete/58cf4e99-c6c8-4d2f-8377-9f3966dae181 - -
+2021-11-05 20:22:00.277 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/Account/Delete/58cf4e99-c6c8-4d2f-8377-9f3966dae181 - - - 404 - - 16.3030ms
+2021-11-05 20:33:52.382 +01:00 [INF] Staring Web App
+2021-11-05 20:33:56.701 +01:00 [INF] User profile is available. Using 'C:\Users\dorynekm\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-11-05 20:33:57.254 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-11-05 20:33:57.255 +01:00 [INF] Hosting environment: Development
+2021-11-05 20:33:57.255 +01:00 [INF] Content root path: C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI
+2021-11-05 20:33:57.374 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/ - -
+2021-11-05 20:33:57.627 +01:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (user)
+2021-11-05 20:33:57.676 +01:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2021-11-05 20:33:57.735 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/ - - - 302 - - 365.9116ms
+2021-11-05 20:33:57.780 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/Identity/Account/Login?ReturnUrl=%2F - -
+2021-11-05 20:33:57.876 +01:00 [INF] Executing endpoint '/Account/Login'
+2021-11-05 20:33:58.006 +01:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2021-11-05 20:33:58.373 +01:00 [INF] Executing handler method ProgLibrary.UI.Areas.Identity.Pages.Account.LoginModel.OnGetAsync - ModelState is "Valid"
+2021-11-05 20:33:58.400 +01:00 [INF] AuthenticationScheme: Identity.External signed out.
+2021-11-05 20:33:58.402 +01:00 [INF] Executed handler method OnGetAsync, returned result .
+2021-11-05 20:33:58.411 +01:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2021-11-05 20:33:58.412 +01:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2021-11-05 20:33:58.894 +01:00 [INF] Executed page /Account/Login in 875.7619ms
+2021-11-05 20:33:58.895 +01:00 [INF] Executed endpoint '/Account/Login'
+2021-11-05 20:33:58.902 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/Identity/Account/Login?ReturnUrl=%2F - - - 200 - text/html;+charset=utf-8 1121.5387ms
+2021-11-05 20:33:58.984 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/css/bootstrap.min.css - -
+2021-11-05 20:33:58.990 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/css/site.css - -
+2021-11-05 20:33:59.013 +01:00 [INF] Sending file. Request path: '/css/site.css'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\css\site.css'
+2021-11-05 20:33:59.020 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/css/site.css - - - 200 1417 text/css 29.7951ms
+2021-11-05 20:33:59.030 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css'
+2021-11-05 20:33:59.034 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/css/bootstrap.min.css - - - 200 155764 text/css 50.2892ms
+2021-11-05 20:33:59.042 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/lib/jquery/dist/jquery.min.js - -
+2021-11-05 20:33:59.046 +01:00 [INF] Sending file. Request path: '/lib/jquery/dist/jquery.min.js'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\lib\jquery\dist\jquery.min.js'
+2021-11-05 20:33:59.050 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/lib/jquery/dist/jquery.min.js - - - 200 89476 application/javascript 8.1896ms
+2021-11-05 20:33:59.075 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/js/bootstrap.bundle.min.js - -
+2021-11-05 20:33:59.086 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js'
+2021-11-05 20:33:59.090 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/js/bootstrap.bundle.min.js - - - 200 78641 application/javascript 15.2245ms
+2021-11-05 20:33:59.177 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - -
+2021-11-05 20:33:59.178 +01:00 [INF] Sending file. Request path: '/js/site.js'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\js\site.js'
+2021-11-05 20:33:59.179 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - - - 200 230 application/javascript 2.1493ms
+2021-11-05 20:33:59.799 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/Identity/lib/jquery-validation/dist/jquery.validate.js - -
+2021-11-05 20:33:59.801 +01:00 [INF] Sending file. Request path: '/Identity/lib/jquery-validation/dist/jquery.validate.js'. Physical path: 'C:\Users\dorynekm\.nuget\packages\microsoft.aspnetcore.identity.ui\5.0.11\staticwebassets\V4\lib\jquery-validation\dist\jquery.validate.js'
+2021-11-05 20:33:59.805 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/Identity/lib/jquery-validation/dist/jquery.validate.js - - - 200 48676 application/javascript 6.8548ms
+2021-11-05 20:33:59.996 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/Identity/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js - -
+2021-11-05 20:34:00.000 +01:00 [INF] Sending file. Request path: '/Identity/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js'. Physical path: 'C:\Users\dorynekm\.nuget\packages\microsoft.aspnetcore.identity.ui\5.0.11\staticwebassets\V4\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js'
+2021-11-05 20:34:00.001 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/Identity/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js - - - 200 19366 application/javascript 4.8494ms
+2021-11-05 20:52:43.329 +01:00 [INF] Staring Web App
+2021-11-05 20:52:46.013 +01:00 [INF] User profile is available. Using 'C:\Users\dorynekm\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-11-05 20:52:46.647 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-11-05 20:52:46.648 +01:00 [INF] Hosting environment: Development
+2021-11-05 20:52:46.648 +01:00 [INF] Content root path: C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI
+2021-11-05 20:52:46.732 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/ - -
+2021-11-05 20:52:46.873 +01:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (user)
+2021-11-05 20:52:46.903 +01:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2021-11-05 20:52:46.952 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/ - - - 302 - - 222.3156ms
+2021-11-05 20:52:46.964 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/Identity/Account/Login?ReturnUrl=%2F - -
+2021-11-05 20:52:47.051 +01:00 [INF] Executing endpoint '/Account/Login'
+2021-11-05 20:52:47.181 +01:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2021-11-05 20:52:47.516 +01:00 [INF] Executing handler method ProgLibrary.UI.Areas.Identity.Pages.Account.LoginModel.OnGetAsync - ModelState is "Valid"
+2021-11-05 20:52:47.541 +01:00 [INF] AuthenticationScheme: Identity.External signed out.
+2021-11-05 20:52:47.544 +01:00 [INF] Executed handler method OnGetAsync, returned result .
+2021-11-05 20:52:47.561 +01:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2021-11-05 20:52:47.562 +01:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2021-11-05 20:52:47.898 +01:00 [INF] Executed page /Account/Login in 708.1135ms
+2021-11-05 20:52:47.899 +01:00 [INF] Executed endpoint '/Account/Login'
+2021-11-05 20:52:47.907 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/Identity/Account/Login?ReturnUrl=%2F - - - 200 - text/html;+charset=utf-8 942.1766ms
+2021-11-05 20:52:47.993 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/js/bootstrap.bundle.min.js - -
+2021-11-05 20:52:47.993 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/css/bootstrap.min.css - -
+2021-11-05 20:52:47.994 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - -
+2021-11-05 20:52:47.996 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/lib/jquery/dist/jquery.min.js - -
+2021-11-05 20:52:48.017 +01:00 [INF] Sending file. Request path: '/js/site.js'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\js\site.js'
+2021-11-05 20:52:48.018 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/css/site.css - -
+2021-11-05 20:52:48.028 +01:00 [INF] Sending file. Request path: '/css/site.css'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\css\site.css'
+2021-11-05 20:52:48.029 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/Identity/lib/jquery-validation/dist/jquery.validate.js - -
+2021-11-05 20:52:48.042 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/Identity/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js - -
+2021-11-05 20:52:48.047 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/css/site.css - - - 200 1417 text/css 28.4258ms
+2021-11-05 20:52:48.049 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - - - 200 230 application/javascript 54.8948ms
+2021-11-05 20:52:48.057 +01:00 [INF] Sending file. Request path: '/lib/jquery/dist/jquery.min.js'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\lib\jquery\dist\jquery.min.js'
+2021-11-05 20:52:48.059 +01:00 [INF] Sending file. Request path: '/Identity/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js'. Physical path: 'C:\Users\dorynekm\.nuget\packages\microsoft.aspnetcore.identity.ui\5.0.11\staticwebassets\V4\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js'
+2021-11-05 20:52:48.060 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js'
+2021-11-05 20:52:48.059 +01:00 [INF] Sending file. Request path: '/Identity/lib/jquery-validation/dist/jquery.validate.js'. Physical path: 'C:\Users\dorynekm\.nuget\packages\microsoft.aspnetcore.identity.ui\5.0.11\staticwebassets\V4\lib\jquery-validation\dist\jquery.validate.js'
+2021-11-05 20:52:48.060 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/Identity/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js - - - 200 19366 application/javascript 17.8819ms
+2021-11-05 20:52:48.072 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css'
+2021-11-05 20:52:48.074 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/lib/jquery/dist/jquery.min.js - - - 200 89476 application/javascript 77.5173ms
+2021-11-05 20:52:48.074 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/js/bootstrap.bundle.min.js - - - 200 78641 application/javascript 81.0576ms
+2021-11-05 20:52:48.075 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/Identity/lib/jquery-validation/dist/jquery.validate.js - - - 200 48676 application/javascript 46.2003ms
+2021-11-05 20:52:48.077 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/css/bootstrap.min.css - - - 200 155764 text/css 83.3890ms
+2021-11-05 21:48:05.850 +01:00 [INF] Request starting HTTP/2 POST https://localhost:44306/Identity/Account/Login?ReturnUrl=%2F application/x-www-form-urlencoded 277
+2021-11-05 21:48:05.900 +01:00 [INF] Executing endpoint '/Account/Login'
+2021-11-05 21:48:05.901 +01:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2021-11-05 21:48:05.962 +01:00 [INF] Executing handler method ProgLibrary.UI.Areas.Identity.Pages.Account.LoginModel.OnPostAsync - ModelState is "Valid"
+2021-11-05 21:48:06.980 +01:00 [INF] Entity Framework Core 5.0.11 initialized 'AuthenticationDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2021-11-05 21:48:07.558 +01:00 [INF] Executed DbCommand (19ms) [Parameters=[@__normalizedUserName_0='?' (Size = 25)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."AccessFailedCount", "a"."ConcurrencyStamp", "a"."Email", "a"."EmailConfirmed", "a"."LockoutEnabled", "a"."LockoutEnd", "a"."NormalizedEmail", "a"."NormalizedUserName", "a"."PasswordHash", "a"."PhoneNumber", "a"."PhoneNumberConfirmed", "a"."SecurityStamp", "a"."TwoFactorEnabled", "a"."UserName"
+FROM "AspNetUsers" AS "a"
+WHERE "a"."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2021-11-05 21:48:07.830 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__user_Id_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."ClaimType", "a"."ClaimValue", "a"."UserId"
+FROM "AspNetUserClaims" AS "a"
+WHERE "a"."UserId" = @__user_Id_0
+2021-11-05 21:48:07.866 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "a0"."Name"
+FROM "AspNetUserRoles" AS "a"
+INNER JOIN "AspNetRoles" AS "a0" ON "a"."RoleId" = "a0"."Id"
+WHERE "a"."UserId" = @__userId_0
+2021-11-05 21:48:07.876 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."ConcurrencyStamp", "a"."Name", "a"."NormalizedName"
+FROM "AspNetRoles" AS "a"
+WHERE "a"."NormalizedName" = @__normalizedName_0
+LIMIT 1
+2021-11-05 21:48:07.909 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__role_Id_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."ClaimType", "a"."ClaimValue"
+FROM "AspNetRoleClaims" AS "a"
+WHERE "a"."RoleId" = @__role_Id_0
+2021-11-05 21:48:07.917 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."ConcurrencyStamp", "a"."Name", "a"."NormalizedName"
+FROM "AspNetRoles" AS "a"
+WHERE "a"."NormalizedName" = @__normalizedName_0
+LIMIT 1
+2021-11-05 21:48:07.922 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__role_Id_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."ClaimType", "a"."ClaimValue"
+FROM "AspNetRoleClaims" AS "a"
+WHERE "a"."RoleId" = @__role_Id_0
+2021-11-05 21:48:07.931 +01:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2021-11-05 21:48:07.932 +01:00 [INF] Uzytkownik zalogowany
+2021-11-05 21:48:07.955 +01:00 [INF] Client: 
+2021-11-05 21:48:07.970 +01:00 [INF] Start processing HTTP request POST "https://localhost:44336/api/Account/Login"
+2021-11-05 21:48:07.972 +01:00 [INF] Sending HTTP request POST "https://localhost:44336/api/Account/Login"
+2021-11-05 21:48:10.703 +01:00 [INF] Received HTTP response headers after 2725.6839ms - 200
+2021-11-05 21:48:10.704 +01:00 [INF] End processing HTTP request after 2736.3088ms - 200
+2021-11-05 21:48:10.709 +01:00 [INF] Response: {
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJQcm9nTGlicmFyeXw1OGNmNGU5OS1jNmM4LTRkMmYtODM3Ny05ZjM5NjZkYWUxODEiLCJuYW1lIjoibWFjaWVqZG9yeW5lazk1QGdtYWlsLmNvbSIsInVuaXF1ZV9uYW1lIjoiNThjZjRlOTktYzZjOC00ZDJmLTgzNzctOWYzOTY2ZGFlMTgxIiwianRpIjoiNDc5YjZlZGEtMjViYi00NWI4LTg1ZjUtNmYwNmNlNWE2MTlhIiwiaWF0IjoiMTYzNjE0ODg5MDQ2MSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiNThjZjRlOTktYzZjOC00ZDJmLTgzNzctOWYzOTY2ZGFlMTgxIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZSI6Im1hY2llamRvcnluZWs5NUBnbWFpbC5jb20iLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJtYWNpZWpkb3J5bmVrOTVAZ21haWwuY29tIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjpbInVzZXIiLCJhZG1pbiJdLCJuYmYiOjE2MzYxNDUyOTAsImV4cCI6MTYzNjE0ODg5MCwiaXNzIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NDQzMzYiLCJhdWQiOiJodHRwczovL2xvY2FsaG9zdDo0NDMzNiJ9.cUBAkdb8wQv1OrEraEeVs6vF1IVooPF_r4sxMiKdUEU",
+  "role": "user, admin",
+  "expires": 1636152490461
+}
+2021-11-05 21:48:10.719 +01:00 [INF] Executed handler method OnPostAsync, returned result Microsoft.AspNetCore.Mvc.LocalRedirectResult.
+2021-11-05 21:48:10.723 +01:00 [INF] Executing LocalRedirectResult, redirecting to /.
+2021-11-05 21:48:10.725 +01:00 [INF] Executed page /Account/Login in 4823.1255ms
+2021-11-05 21:48:10.725 +01:00 [INF] Executed endpoint '/Account/Login'
+2021-11-05 21:48:10.729 +01:00 [INF] Session started; Key:f9d897d6-4f1c-b1e6-8c19-68efc73db09b, Id:dd9da43f-ccf4-f487-8831-ec77de174cff
+2021-11-05 21:48:10.734 +01:00 [INF] Request finished HTTP/2 POST https://localhost:44306/Identity/Account/Login?ReturnUrl=%2F application/x-www-form-urlencoded 277 - 302 - - 4882.9067ms
+2021-11-05 21:48:10.745 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/ - -
+2021-11-05 21:48:10.757 +01:00 [INF] Authorization was successful.
+2021-11-05 21:48:10.758 +01:00 [INF] Executing endpoint 'ProgLibrary.UI.Controllers.HomeController.Index (ProgLibrary.UI)'
+2021-11-05 21:48:10.766 +01:00 [INF] Route matched with {action = "Index", controller = "Home", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller ProgLibrary.UI.Controllers.HomeController (ProgLibrary.UI).
+2021-11-05 21:48:10.771 +01:00 [INF] Executing ViewResult, running view Index.
+2021-11-05 21:48:10.787 +01:00 [INF] Executed ViewResult - view Index executed in 18.1911ms.
+2021-11-05 21:48:10.788 +01:00 [INF] Executed action ProgLibrary.UI.Controllers.HomeController.Index (ProgLibrary.UI) in 21.7975ms
+2021-11-05 21:48:10.789 +01:00 [INF] Executed endpoint 'ProgLibrary.UI.Controllers.HomeController.Index (ProgLibrary.UI)'
+2021-11-05 21:48:10.789 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/ - - - 200 - text/html;+charset=utf-8 44.2487ms
+2021-11-05 21:48:10.857 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/css/site.css - -
+2021-11-05 21:48:10.859 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/lib/jquery/dist/jquery.min.js - -
+2021-11-05 21:48:10.859 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/css/bootstrap.min.css - -
+2021-11-05 21:48:10.865 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - -
+2021-11-05 21:48:10.867 +01:00 [INF] Sending file. Request path: '/css/site.css'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\css\site.css'
+2021-11-05 21:48:10.869 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/js/bootstrap.bundle.min.js - -
+2021-11-05 21:48:10.876 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/css/site.css - - - 200 1417 text/css 18.7419ms
+2021-11-05 21:48:10.897 +01:00 [INF] Sending file. Request path: '/js/site.js'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\js\site.js'
+2021-11-05 21:48:10.898 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - - - 200 230 application/javascript 32.9279ms
+2021-11-05 21:48:10.899 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js'
+2021-11-05 21:48:10.900 +01:00 [INF] Sending file. Request path: '/lib/jquery/dist/jquery.min.js'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\lib\jquery\dist\jquery.min.js'
+2021-11-05 21:48:10.901 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css'
+2021-11-05 21:48:10.903 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/js/bootstrap.bundle.min.js - - - 200 78641 application/javascript 34.2394ms
+2021-11-05 21:48:10.904 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/lib/jquery/dist/jquery.min.js - - - 200 89476 application/javascript 44.8664ms
+2021-11-05 21:48:10.904 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/css/bootstrap.min.css - - - 200 155764 text/css 45.4241ms
+2021-11-05 21:48:29.956 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/Account - -
+2021-11-05 21:48:29.961 +01:00 [INF] Authorization was successful.
+2021-11-05 21:48:29.962 +01:00 [INF] Executing endpoint 'ProgLibrary.UI.Controllers.AccountController.Index (ProgLibrary.UI)'
+2021-11-05 21:48:29.968 +01:00 [INF] Route matched with {action = "Index", controller = "Account", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller ProgLibrary.UI.Controllers.AccountController (ProgLibrary.UI).
+2021-11-05 21:48:29.976 +01:00 [INF] Client: Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJQcm9nTGlicmFyeXw1OGNmNGU5OS1jNmM4LTRkMmYtODM3Ny05ZjM5NjZkYWUxODEiLCJuYW1lIjoibWFjaWVqZG9yeW5lazk1QGdtYWlsLmNvbSIsInVuaXF1ZV9uYW1lIjoiNThjZjRlOTktYzZjOC00ZDJmLTgzNzctOWYzOTY2ZGFlMTgxIiwianRpIjoiNDc5YjZlZGEtMjViYi00NWI4LTg1ZjUtNmYwNmNlNWE2MTlhIiwiaWF0IjoiMTYzNjE0ODg5MDQ2MSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiNThjZjRlOTktYzZjOC00ZDJmLTgzNzctOWYzOTY2ZGFlMTgxIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZSI6Im1hY2llamRvcnluZWs5NUBnbWFpbC5jb20iLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJtYWNpZWpkb3J5bmVrOTVAZ21haWwuY29tIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjpbInVzZXIiLCJhZG1pbiJdLCJuYmYiOjE2MzYxNDUyOTAsImV4cCI6MTYzNjE0ODg5MCwiaXNzIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NDQzMzYiLCJhdWQiOiJodHRwczovL2xvY2FsaG9zdDo0NDMzNiJ9.cUBAkdb8wQv1OrEraEeVs6vF1IVooPF_r4sxMiKdUEU
+
+2021-11-05 21:48:29.977 +01:00 [INF] Start processing HTTP request GET "https://localhost:44336/api/Account/Browse"
+2021-11-05 21:48:29.977 +01:00 [INF] Sending HTTP request GET "https://localhost:44336/api/Account/Browse"
+2021-11-05 21:48:30.252 +01:00 [INF] Received HTTP response headers after 274.9045ms - 200
+2021-11-05 21:48:30.252 +01:00 [INF] End processing HTTP request after 275.5623ms - 200
+2021-11-05 21:48:30.289 +01:00 [INF] Executing ViewResult, running view Index.
+2021-11-05 21:48:30.315 +01:00 [INF] Executed ViewResult - view Index executed in 26.6694ms.
+2021-11-05 21:48:30.315 +01:00 [INF] Executed action ProgLibrary.UI.Controllers.AccountController.Index (ProgLibrary.UI) in 346.4951ms
+2021-11-05 21:48:30.315 +01:00 [INF] Executed endpoint 'ProgLibrary.UI.Controllers.AccountController.Index (ProgLibrary.UI)'
+2021-11-05 21:48:30.317 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/Account - - - 200 - text/html;+charset=utf-8 360.7320ms
+2021-11-05 21:48:30.389 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/css/site.css - -
+2021-11-05 21:48:30.389 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/css/bootstrap.min.css - -
+2021-11-05 21:48:30.389 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/lib/jquery/dist/jquery.min.js - -
+2021-11-05 21:48:30.389 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/js/bootstrap.bundle.min.js - -
+2021-11-05 21:48:30.391 +01:00 [INF] Sending file. Request path: '/css/site.css'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\css\site.css'
+2021-11-05 21:48:30.401 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - -
+2021-11-05 21:48:30.425 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/css/site.css - - - 200 1417 text/css 35.9597ms
+2021-11-05 21:48:30.432 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js'
+2021-11-05 21:48:30.435 +01:00 [INF] Sending file. Request path: '/js/site.js'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\js\site.js'
+2021-11-05 21:48:30.442 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - - - 200 230 application/javascript 40.2569ms
+2021-11-05 21:48:30.442 +01:00 [INF] Sending file. Request path: '/lib/jquery/dist/jquery.min.js'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\lib\jquery\dist\jquery.min.js'
+2021-11-05 21:48:30.473 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css'
+2021-11-05 21:48:30.478 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/lib/jquery/dist/jquery.min.js - - - 200 89476 application/javascript 88.5193ms
+2021-11-05 21:48:30.478 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/js/bootstrap.bundle.min.js - - - 200 78641 application/javascript 88.6847ms
+2021-11-05 21:48:30.484 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/css/bootstrap.min.css - - - 200 155764 text/css 94.6082ms
+2021-11-05 21:48:32.037 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/Account/Details/58cf4e99-c6c8-4d2f-8377-9f3966dae181 - -
+2021-11-05 21:48:32.050 +01:00 [INF] Authorization was successful.
+2021-11-05 21:48:32.050 +01:00 [INF] Executing endpoint 'ProgLibrary.UI.Controllers.AccountController.Details (ProgLibrary.UI)'
+2021-11-05 21:48:32.055 +01:00 [INF] Route matched with {action = "Details", controller = "Account", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Details(System.Guid) on controller ProgLibrary.UI.Controllers.AccountController (ProgLibrary.UI).
+2021-11-05 21:48:32.058 +01:00 [INF] Client: Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJQcm9nTGlicmFyeXw1OGNmNGU5OS1jNmM4LTRkMmYtODM3Ny05ZjM5NjZkYWUxODEiLCJuYW1lIjoibWFjaWVqZG9yeW5lazk1QGdtYWlsLmNvbSIsInVuaXF1ZV9uYW1lIjoiNThjZjRlOTktYzZjOC00ZDJmLTgzNzctOWYzOTY2ZGFlMTgxIiwianRpIjoiNDc5YjZlZGEtMjViYi00NWI4LTg1ZjUtNmYwNmNlNWE2MTlhIiwiaWF0IjoiMTYzNjE0ODg5MDQ2MSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiNThjZjRlOTktYzZjOC00ZDJmLTgzNzctOWYzOTY2ZGFlMTgxIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZSI6Im1hY2llamRvcnluZWs5NUBnbWFpbC5jb20iLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJtYWNpZWpkb3J5bmVrOTVAZ21haWwuY29tIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjpbInVzZXIiLCJhZG1pbiJdLCJuYmYiOjE2MzYxNDUyOTAsImV4cCI6MTYzNjE0ODg5MCwiaXNzIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NDQzMzYiLCJhdWQiOiJodHRwczovL2xvY2FsaG9zdDo0NDMzNiJ9.cUBAkdb8wQv1OrEraEeVs6vF1IVooPF_r4sxMiKdUEU
+
+2021-11-05 21:48:32.098 +01:00 [INF] Start processing HTTP request GET "https://localhost:44336/api/Account/GetById"
+2021-11-05 21:48:32.098 +01:00 [INF] Sending HTTP request GET "https://localhost:44336/api/Account/GetById"
+2021-11-05 21:48:32.566 +01:00 [INF] Received HTTP response headers after 467.5148ms - 500
+2021-11-05 21:48:32.566 +01:00 [INF] End processing HTTP request after 467.8912ms - 500
+2021-11-05 21:48:32.766 +01:00 [INF] Executed action ProgLibrary.UI.Controllers.AccountController.Details (ProgLibrary.UI) in 710.5741ms
+2021-11-05 21:48:32.766 +01:00 [INF] Executed endpoint 'ProgLibrary.UI.Controllers.AccountController.Details (ProgLibrary.UI)'
+2021-11-05 21:48:32.769 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Net.Http.HttpRequestException: Response status code does not indicate success: 500 (Internal Server Error).
+   at System.Net.Http.HttpResponseMessage.EnsureSuccessStatusCode()
+   at System.Net.Http.Json.HttpClientJsonExtensions.GetFromJsonAsyncCore[T](Task`1 taskResponse, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at ProgLibrary.Infrastructure.Services.BrokerService.SendJsonGetAsync[T](HttpClient httpClient, String action, T command) in C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.Infrastructure\Services\BrokerService.cs:line 52
+   at ProgLibrary.UI.Controllers.AccountController.Details(Guid userId) in C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\Controllers\AccountController.cs:line 58
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-11-05 21:48:32.905 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/Account/Details/58cf4e99-c6c8-4d2f-8377-9f3966dae181 - - - 500 - text/html;+charset=utf-8 867.9947ms
+2021-11-05 21:50:06.677 +01:00 [INF] Staring Web App
+2021-11-05 21:50:10.435 +01:00 [INF] User profile is available. Using 'C:\Users\dorynekm\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-11-05 21:50:11.199 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-11-05 21:50:11.200 +01:00 [INF] Hosting environment: Development
+2021-11-05 21:50:11.200 +01:00 [INF] Content root path: C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI
+2021-11-05 21:50:11.316 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/ - -
+2021-11-05 21:50:11.597 +01:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (user)
+2021-11-05 21:50:11.631 +01:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2021-11-05 21:50:11.716 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/ - - - 302 - - 402.4700ms
+2021-11-05 21:50:11.756 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/Identity/Account/Login?ReturnUrl=%2F - -
+2021-11-05 21:50:11.850 +01:00 [INF] Executing endpoint '/Account/Login'
+2021-11-05 21:50:12.009 +01:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2021-11-05 21:50:12.556 +01:00 [INF] Executing handler method ProgLibrary.UI.Areas.Identity.Pages.Account.LoginModel.OnGetAsync - ModelState is "Valid"
+2021-11-05 21:50:12.587 +01:00 [INF] AuthenticationScheme: Identity.External signed out.
+2021-11-05 21:50:12.589 +01:00 [INF] Executed handler method OnGetAsync, returned result .
+2021-11-05 21:50:12.598 +01:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2021-11-05 21:50:12.598 +01:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2021-11-05 21:50:13.063 +01:00 [INF] Executed page /Account/Login in 1040.1553ms
+2021-11-05 21:50:13.064 +01:00 [INF] Executed endpoint '/Account/Login'
+2021-11-05 21:50:13.072 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/Identity/Account/Login?ReturnUrl=%2F - - - 200 - text/html;+charset=utf-8 1315.5969ms
+2021-11-05 21:50:13.174 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/css/site.css - -
+2021-11-05 21:50:13.174 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/css/bootstrap.min.css - -
+2021-11-05 21:50:13.175 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - -
+2021-11-05 21:50:13.175 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/lib/jquery/dist/jquery.min.js - -
+2021-11-05 21:50:13.201 +01:00 [INF] Sending file. Request path: '/js/site.js'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\js\site.js'
+2021-11-05 21:50:13.201 +01:00 [INF] Sending file. Request path: '/css/site.css'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\css\site.css'
+2021-11-05 21:50:13.201 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/Identity/lib/jquery-validation/dist/jquery.validate.js - -
+2021-11-05 21:50:13.201 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/Identity/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js - -
+2021-11-05 21:50:13.226 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/js/bootstrap.bundle.min.js - -
+2021-11-05 21:50:13.231 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/css/site.css - - - 200 1417 text/css 57.3986ms
+2021-11-05 21:50:13.231 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - - - 200 230 application/javascript 56.0763ms
+2021-11-05 21:50:13.236 +01:00 [INF] Sending file. Request path: '/Identity/lib/jquery-validation/dist/jquery.validate.js'. Physical path: 'C:\Users\dorynekm\.nuget\packages\microsoft.aspnetcore.identity.ui\5.0.11\staticwebassets\V4\lib\jquery-validation\dist\jquery.validate.js'
+2021-11-05 21:50:13.237 +01:00 [INF] Sending file. Request path: '/Identity/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js'. Physical path: 'C:\Users\dorynekm\.nuget\packages\microsoft.aspnetcore.identity.ui\5.0.11\staticwebassets\V4\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js'
+2021-11-05 21:50:13.238 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/Identity/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js - - - 200 19366 application/javascript 36.1584ms
+2021-11-05 21:50:13.240 +01:00 [INF] Sending file. Request path: '/lib/jquery/dist/jquery.min.js'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\lib\jquery\dist\jquery.min.js'
+2021-11-05 21:50:13.254 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/Identity/lib/jquery-validation/dist/jquery.validate.js - - - 200 48676 application/javascript 52.6290ms
+2021-11-05 21:50:13.261 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/lib/jquery/dist/jquery.min.js - - - 200 89476 application/javascript 84.9810ms
+2021-11-05 21:50:13.263 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js'
+2021-11-05 21:50:13.266 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: 'C:\Users\dorynekm\Source\Repos\maciejdorynek95\ProgLibrary.UI\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css'
+2021-11-05 21:50:13.270 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/css/bootstrap.min.css - - - 200 155764 text/css 95.4317ms
+2021-11-05 21:50:13.270 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44306/lib/bootstrap/dist/js/bootstrap.bundle.min.js - - - 200 78641 application/javascript 44.9594ms
+2021-11-05 21:57:16.918 +01:00 [INF] Staring Web App
+2021-11-05 21:57:21.888 +01:00 [INF] User profile is available. Using 'C:\Users\dorynekm\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.

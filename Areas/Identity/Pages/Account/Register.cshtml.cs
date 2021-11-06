@@ -62,6 +62,7 @@ namespace ProgLibrary.UI.Areas.Identity.Pages.Account
         //public Task OnGetAsync(string returnUrl = null)
         //{
         //    ReturnUrl = returnUrl;
+
         //}
 
         public async Task<IActionResult> OnPostAsync(string returnUrl = null)
@@ -77,9 +78,16 @@ namespace ProgLibrary.UI.Areas.Identity.Pages.Account
                     Password = Input.Password
                 };
                 var client = await _brokerService.Create(HttpContext);
-                await _brokerService.SendJsonPostAsync(client, "Account/Register", user);
-
+                var result = await _brokerService.SendJsonPostAsync(client, "Account/Register", user);
+                if (!result.IsSuccessStatusCode)
+                {
+                   ModelState.AddModelError("ERROR",result.Content.ReadAsStringAsync().Result);
+                   return Page();
+                }
+                return LocalRedirect(returnUrl);
+                //return RedirectToAction("Index", "Home", new { area = "" });
             }
+            ModelState.AddModelError("Error", "Nieprawidłowe dane użyte do rejestracji");
             return Page();
         }
     }
