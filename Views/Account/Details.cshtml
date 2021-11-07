@@ -25,9 +25,14 @@
                     <div class="card">
                         <h5 class="card-header">Rezerwacja @item.ReservationTimeFrom - @item.ReservationTimeTo</h5>
                         <div class="card-body">
+                        
                             <h6 class="card-title">
-                                Tytuł: @item.BookId
+                                Tytuł: @item.Book?.Title
                             </h6>
+                            <h7>
+                                Autor:@item.Book.Author
+
+                            </h7>
                             <p class="card-text">User Id: @item.UserId</p>
                             <form method="get" action="~/Account/Details/@item.UserId">
                                 <button class="btn btn-primary">Przejdź do użytkownika </button>
